@@ -1,7 +1,7 @@
 > [!NOTE]
 > The material was created with the help of ChatGPT and Copilot.
 
-# 🚀 **Cybersecurity & Data Privacy – Kick-Off Session**
+# 🚀 **Cybersecurity & Data Privacy**
 
 ## 🎯 Course Theme
 
