@@ -72,8 +72,6 @@ Cybersecurity is not only about technology — it’s about people, processes, a
 
 ---
 
----
-
 ### 7. ✈️ **Global Airline Booking/Reservation System Outage (Multi-carrier, July 2024)**
 
 * **What happened:** On 19 July 2024 a global IT outage affected airlines (and other industries) due to a faulty update or vendor software glitch; many flights delayed or cancelled. ([Reuters][12])
