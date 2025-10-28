@@ -58,11 +58,9 @@ Cybersecurity is not only about technology — it’s about people, processes, a
 
 ### 6. 🌐 **Aeroflot Cyberattack (Russia, July 2025)**
 
-* **What happened:**
-  On 28 July 2025, **Aeroflot**, Russia’s largest airline, suffered a massive cyberattack that disrupted check-in systems and forced the **cancellation of over 50 flights**. The attack was claimed by pro-Ukraine hacker groups.
+* **What happened:** On 28 July 2025, **Aeroflot**, Russia’s largest airline, suffered a massive cyberattack that disrupted check-in systems and forced the **cancellation of over 50 flights**. The attack was claimed by pro-Ukraine hacker groups.
   ([The Guardian](https://www.theguardian.com/business/2025/jul/28/russia-aeroflot-cancels-flights-pro-ukraine-hackers-cyber-attack))
-* **Why it failed:**
-  Hackers reportedly had long-term access to internal systems, exploiting **weak network segmentation**, **unpatched servers**, and **insufficient monitoring**.
+* **Why it failed:** Hackers reportedly had long-term access to internal systems, exploiting **weak network segmentation**, **unpatched servers**, and **insufficient monitoring**.
   ([Bitdefender Blog](https://www.bitdefender.com/en-us/blog/hotforsecurity/major-cyberattack-disrupts-russian-airline-aeroflot))
 * **Consequences:**
 
@@ -70,8 +68,7 @@ Cybersecurity is not only about technology — it’s about people, processes, a
   * Significant operational disruption and passenger chaos.
   * Reports of sensitive staff and passenger data being leaked online.
     ([The Record](https://therecord.media/hackers-leak-purported-aeroflot-data))
-* **Lesson:**
-  Even highly resourced, state-connected organisations are not immune to cyberattacks. **Prolonged undetected access** and **weak internal segmentation** can lead to national-level consequences for transport infrastructure.
+* **Lesson:** Even highly resourced, state-connected organisations are not immune to cyberattacks. **Prolonged undetected access** and **weak internal segmentation** can lead to national-level consequences for transport infrastructure.
 
 ---
 
