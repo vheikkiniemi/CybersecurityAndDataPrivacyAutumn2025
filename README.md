@@ -9,70 +9,71 @@ Cybersecurity is not only about technology — it’s about people, processes, a
 
 ---
 
-## 🔥 Five Real-World Cases Where Security Failed
+## 🔥 Seven Real-World Cases Where Security Failed
 
-### 1. 🇫🇮 **Vastaamo Psychotherapy Data Breach (Finland, 2020)**
+### 1. 🇫🇮 **Vastaamo Oy Psychotherapy Data Breach (Finland, 2020)**
 
-* **What happened:**
-  Hackers stole psychotherapy notes of tens of thousands of patients and later blackmailed both the company and individual victims.
-* **Why it failed:**
-  Unencrypted databases, poor access control, and lack of regular security audits.
-* **Consequences:**
-  CEO resignation, bankruptcy, and long-term emotional harm to victims.
-* **Lesson:**
-  Privacy is personal — weak data protection can destroy real lives.
+* **What happened:** Hackers stole psychotherapy notes and personal data of tens of thousands of patients from a Finnish private mental-health provider. ([Wikipedia](https://en.wikipedia.org/wiki/Vastaamo_data_breach))
+* **Why it failed:** Unencrypted databases, weak access control, root-level access from the internet, and failure to act promptly on intrusion. ([berggren.eu](https://www.berggren.eu/en/blog/blog/vastaamo-data-breach-finnish-data-protection-authority-issues-decision-and-imposes-substanial-fine))
+* **Consequences:** Extortion of patients, national scandal, bankruptcy of the company, increased regulatory scrutiny. ([computerweekly.com](https://www.computerweekly.com/news/252493791/Finnish-government-tables-laws-to-protect-data-from-cyber-criminals))
+* **Lesson:** Protecting personal data means protecting people — in sectors like healthcare, failure has long-lasting human impacts.
 
 ---
 
-### 2. 🇫🇮 **City of Helsinki Data Breach (2024)**
+### 2. 🇫🇮 **City of Helsinki Data Breach (Finland, 2024)**
 
-* **What happened:**
-  Sensitive data of students and guardians was exposed due to an outdated server and poor network segmentation.
-* **Why it failed:**
-  Unpatched legacy systems and insufficient monitoring allowed lateral movement within city networks.
-* **Consequences:**
-  Major government investigation, public loss of trust, and urgent cybersecurity reforms.
-* **Lesson:**
-  Public organizations must maintain the same security standards as private companies.
+* **What happened:** A large scale breach in the city’s education division: usernames, email addresses and personal identity codes of students, guardians and personnel were accessed. ([Helsinki Times](https://www.helsinkitimes.fi/finland/finland-news/domestic/25213-up-to-120-000-affected-by-data-breach-at-city-of-helsinki.html))
+* **Why it failed:** Legacy systems, weak network segmentation, delayed detection and response. ([turvallisuustutkinta.fi](https://www.turvallisuustutkinta.fi/material/sites/otkes/otkes/mvyzc49g6/P2024_Helsinki_Investigation_report.pdf))
+* **Consequences:** Up to ~80,000 learning-division users impacted; major public institution trust damage. ([Helsinki Times](https://www.helsinkitimes.fi/finland/finland-news/domestic/25213-up-to-120-000-affected-by-data-breach-at-city-of-helsinki.html))
+* **Lesson:** Public-sector organisations must enforce cybersecurity hygiene at the same level as private companies; scale and societal impact are high.
 
 ---
 
-### 3. 🇫🇮 **Finnish Bank Vulnerability (2024)**
+### 3. 🇫🇮 **Finnish Bank Vulnerability (Finland, 2024)**
 
-* **What happened:**
-  A critical security flaw in a Finnish bank’s online service could have allowed unauthorized access to customer information. The vulnerability was discovered by an ethical hacker.
-* **Why it failed:**
-  Inadequate security testing and lack of input validation within a legacy web component.
-* **Consequences:**
-  Temporary service shutdown, public attention, and a mandatory nationwide audit of similar systems.
-* **Lesson:**
-  Even critical financial systems can contain basic coding errors — responsible disclosure saves reputations and users.
+* **What happened:** A serious vulnerability was found in a Finnish bank’s online system, potentially exposing customer data. ([YLE](https://yle.fi/a/74-20189809)), ([FIN-FSA](https://www.finanssivalvonta.fi/en/publications-and-press-releases/Press-release/2025/a-decision-appendix-has-been-added-combined-penalty-payment-of-eur-7670000-and-public-warning-for-s-bank-plc/)).
+* **Why it failed:** Insufficient security testing, unpatched systems, and weak input validation.
+* **Consequences:** Regulatory scrutiny, reputational damage, operational risk.
+* **Lesson:** Even **highly regulated** financial organisations can have avoidable weaknesses — security cannot be assumed.
 
 ---
 
-### 4. 🌍 **British Airways Data Breach (2018)**
+### 4. 🌍 **British Airways Data Breach (UK, 2018)**
 
-* **What happened:**
-  Attackers injected malicious code into BA’s website and app, stealing payment data from over 400,000 customers.
-* **Why it failed:**
-  Lack of monitoring for changes in third-party scripts.
-* **Consequences:**
-  £20 million fine by the UK ICO and massive brand damage.
-* **Lesson:**
-  Supply-chain security and web application integrity must never be ignored.
+* **What happened:** Attackers injected malicious JavaScript into BA’s website/app, siphoning payment card data of hundreds of thousands of customers. ([Wikipedia](https://en.wikipedia.org/wiki/British_Airways_data_breach))
+* **Why it failed:** Compromised third-party account, plain-text passwords, outdated libraries, insufficient monitoring. ([Source Defense](https://sourcedefense.com/resources/blog/british-airways-a-case-study-in-gdpr-compliance-failure/))
+* **Consequences:** £20 m fine by UK ICO under GDPR, customer exposure, brand damage. ([Clifford Chance](https://www.cliffordchance.com/insights/resources/blogs/talking-tech/en/articles/2020/10/ico-announces-significantly-reduced-gdpr-fine-for-british-airway.html))
+* **Lesson:** Web applications and third-party dependencies remain prime attack surfaces; payment data is a high-value target.
 
 ---
 
-### 5. 🇺🇸 **Colonial Pipeline Ransomware Attack (2021)**
+### 5. 🇺🇸 **Colonial Pipeline Company Ransomware Attack (USA, 2021)**
 
-* **What happened:**
-  A single stolen VPN password led to a ransomware attack that shut down a major U.S. fuel pipeline.
-* **Why it failed:**
-  No multi-factor authentication and poor network segmentation.
+* **What happened:** A ransomware attack led to shutdown of approx. half the U.S. East Coast’s fuel pipeline network after hackers gained access via a compromised VPN account. ([Wikipedia](https://en.wikipedia.org/wiki/Colonial_Pipeline_ransomware_attack))
+* **Why it failed:** Single-factor authentication, legacy VPN account, poor network segmentation. ([Defensorum](https://www.defensorum.com/compromised-vpn-account-colonial-pipeline/))
+* **Consequences:** Fuel shortages, emergency declaration, ~$4.4-5 m ransom paid. ([WIRED](https://www.wired.com/story/colonial-pipeline-ransomware-payment))
+* **Lesson:** Cybersecurity failures in infrastructure can hit society broadly (not just the company) — critical systems require extra layers of defence.
+
+---
+
+### 6. 🌐 **Aeroflot Cyberattack (Russia, 2025)**
+
+* **What happened:** Aeroflot, Russia’s largest airline, suffered a major cyber­attack on 28 July 2025 that disrupted its information systems and led to the cancellation of dozens (50+) of flights. ([The Guardian](https://www.theguardian.com/business/2025/jul/28/russia-aeroflot-cancels-flights-pro-ukraine-hackers-cyber-attack))
+* **Why it failed:** Hacker groups claim to have been inside the network for over a year, exploiting weak segmentation and unpatched systems, then destroying or manipulating thousands of servers and accessing large volumes of sensitive data. ([ft.com](https://www.ft.com/content/9114257b-94cf-4726-b8cc-7e71b3304c8a))
 * **Consequences:**
-  Nationwide fuel shortages, panic buying, and a $4.4 million ransom payment.
-* **Lesson:**
-  Cybersecurity failures can directly disrupt society and critical infrastructure.
+  • Massive operational disruption (flights cancelled, delays, passenger chaos) ([AP News](https://apnews.com/article/2cb7e23d47638769021e02df8cfd1ec4))
+  • Theft or exposure risk of passenger and airline-internal data (claims of 20 TB+ stolen, 7 000 servers disabled) ([ft.com](https://www.ft.com/content/9114257b-94cf-4726-b8cc-7e71b3304c8a))
+  • Legal/regulatory action: Russia’s Prosecutor General opened a criminal investigation. ([Reuters](https://www.reuters.com/world/europe/russia-opens-criminal-case-over-aeroflot-cyberattack-2025-07-28/))
+* **Lesson:** Even very large, critical infrastructure organisations (airlines) are vulnerable if cybersecurity hygiene (patch-management, network segmentation, access controls, timely detection) is weak. The ripple effects are broad: operational, financial, reputational, and may affect many innocent parties (passengers, employees).
+
+---
+
+### 7. ✈️ **Global Airline Booking/Reservation System Outage (Multi-carrier, July 2024)**
+
+* **What happened:** On 19 July 2024 a global IT outage affected airlines (and other industries) due to a faulty update or vendor software glitch; many flights delayed or cancelled. ([Reuters][12])
+* **Why it failed:** A faulty software update cascaded through systems, insufficient redundancy and contingency planning. ([internationalinsurance.org](https://www.internationalinsurance.org/insights_global_IT_outage_airline_industry_cyber_and_turbulence_risk))
+* **Consequences:** Operational chaos, thousands of delays/cancellations, passenger trust impacted. ([Reuters](https://www.reuters.com/business/aerospace-defense/air-travel-hit-by-global-cyber-outage-2024-07-19/))
+* **Lesson:** IT failures, even when not malicious, can cripple operations; resilience planning matters as much as prevention.
 
 ---
 
