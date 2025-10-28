@@ -56,15 +56,24 @@ Cybersecurity is not only about technology — it’s about people, processes, a
 
 ---
 
-### 6. 🌐 **Aeroflot Cyberattack (Russia, 2025)**
+### 6. 🌐 **Aeroflot Cyberattack (Russia, July 2025)**
 
-* **What happened:** Aeroflot, Russia’s largest airline, suffered a major cyber­attack on 28 July 2025 that disrupted its information systems and led to the cancellation of dozens (50+) of flights. ([The Guardian](https://www.theguardian.com/business/2025/jul/28/russia-aeroflot-cancels-flights-pro-ukraine-hackers-cyber-attack))
-* **Why it failed:** Hacker groups claim to have been inside the network for over a year, exploiting weak segmentation and unpatched systems, then destroying or manipulating thousands of servers and accessing large volumes of sensitive data. ([ft.com](https://www.ft.com/content/9114257b-94cf-4726-b8cc-7e71b3304c8a))
+* **What happened:**
+  On 28 July 2025, **Aeroflot**, Russia’s largest airline, suffered a massive cyberattack that disrupted check-in systems and forced the **cancellation of over 50 flights**. The attack was claimed by pro-Ukraine hacker groups.
+  ([The Guardian](https://www.theguardian.com/business/2025/jul/28/russia-aeroflot-cancels-flights-pro-ukraine-hackers-cyber-attack))
+* **Why it failed:**
+  Hackers reportedly had long-term access to internal systems, exploiting **weak network segmentation**, **unpatched servers**, and **insufficient monitoring**.
+  ([Bitdefender Blog](https://www.bitdefender.com/en-us/blog/hotforsecurity/major-cyberattack-disrupts-russian-airline-aeroflot))
 * **Consequences:**
-  * Massive operational disruption (flights cancelled, delays, passenger chaos) ([AP News](https://apnews.com/article/2cb7e23d47638769021e02df8cfd1ec4))
-  * Theft or exposure risk of passenger and airline-internal data (claims of 20 TB+ stolen, 7 000 servers disabled) ([ft.com](https://www.ft.com/content/9114257b-94cf-4726-b8cc-7e71b3304c8a))
-  * Legal/regulatory action: Russia’s Prosecutor General opened a criminal investigation. ([Reuters](https://www.reuters.com/world/europe/russia-opens-criminal-case-over-aeroflot-cyberattack-2025-07-28/))
-* **Lesson:** Even very large, critical infrastructure organisations (airlines) are vulnerable if cybersecurity hygiene (patch-management, network segmentation, access controls, timely detection) is weak. The ripple effects are broad: operational, financial, reputational, and may affect many innocent parties (passengers, employees).
+
+  * Dozens of cancelled or delayed flights across major Russian airports.
+  * Significant operational disruption and passenger chaos.
+  * Reports of sensitive staff and passenger data being leaked online.
+    ([The Record](https://therecord.media/hackers-leak-purported-aeroflot-data))
+* **Lesson:**
+  Even highly resourced, state-connected organisations are not immune to cyberattacks. **Prolonged undetected access** and **weak internal segmentation** can lead to national-level consequences for transport infrastructure.
+
+---
 
 ---
 
