@@ -33,8 +33,8 @@ Three key ecosystems work together to achieve this:
 - 📘 [**ASVS**](https://owasp.org/www-project-application-security-verification-standard/): Verification standard for secure development.
 
 **Examples from OWASP Top 10 (2021):**
-- 🧱 A01: Broken Access Control  
-- 🧬 A03: Injection (e.g., SQL Injection, XSS)
+- 🧱 [**A01: Broken Access Control**](https://owasp.org/Top10/A01_2021-Broken_Access_Control/)  
+- 🧬 [**A03: Injection (e.g., SQL Injection, XSS)**](https://owasp.org/Top10/A03_2021-Injection/)
 
 > 💬 *OWASP = Awareness + Education + Tools*
 
