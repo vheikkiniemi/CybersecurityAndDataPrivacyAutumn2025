@@ -51,7 +51,7 @@ Three key ecosystems work together to achieve this:
   🔍 *Description:* An application includes untrusted data in a web page without validation.  
   🎯 *Impact:* Attackers can inject malicious scripts into users’ browsers.
 
-> 💡 *CWE helps developers understand the root causes behind vulnerabilities.*
+> 💡 *CWE = Helps developers understand the root causes behind vulnerabilities.*
 
 ---
 
@@ -62,12 +62,12 @@ Three key ecosystems work together to achieve this:
 **Maintained by:** [MITRE](https://www.mitre.org/)  
 **Linked database:** [NVD (National Vulnerability Database)](http://nvd.nist.gov/)
 
-### 📌 Example
+### 🧠 Example
 - **[CVE-2022-22965: Spring4Shell](https://www.cve.org/CVERecord?id=CVE-2022-22965)**  
-  *Affected:* Spring Framework versions < 5.3.18 / < 5.2.20  
-  *Impact:* ☠️ Remote Code Execution (RCE)
+  🔍 *Affected:* Spring Framework versions < 5.3.18 / < 5.2.20  
+  🎯 *Impact:* ☠️ Remote Code Execution (RCE)
 
-> ⚙️ CVE = *“The address book of real vulnerabilities.”*
+> 💡 *CVE = The address book of real vulnerabilities.*
 
 ---
 
