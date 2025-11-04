@@ -1,5 +1,4 @@
 # 🔐 Introduction to PortSwigger, OWASP, CWE, CVE & CyBOK
-*A Practical Guide for Cybersecurity Learners and Professionals*
 
 > [!NOTE]
 > The material was created with the help of ChatGPT and Copilot.
@@ -185,11 +184,78 @@ Interactive labs covering:
 ---
 
 ## 💪 Why PortSwigger Matters
+
 ✅ **Security Professionals:** Automate & customize scans  
 ✅ **Developers:** Learn by doing, find & fix early  
 ✅ **Organizations:** Scale secure development practices  
 
 > 🧠 *Education meets execution.*
+
+---
+
+## 💼 Portswigger alternatives
+
+* **PortSwigger (Burp Suite + Web Security Academy)** = hands-on *tool + guided labs* focused on web application security and pentesting workflows. Best for teaching *how to test and fix* web apps, and for manual/automated testing practice.
+* **TryHackMe & similar platforms** = *learning platforms / CTF-style labs* offering structured learning paths across many domains (web, infra, forensics, crypto). Best for onboarding newcomers, gamified practice, and broad blue/red team skill-building.
+* Use them together: **TryHackMe for broad skill-building and motivation → PortSwigger for deep, professional web-app testing skills.**
+
+---
+
+### 🧩 TryHackMe — what it is & where it shines
+
+> [**TryHackMe**](https://tryhackme.com/)
+
+* **What:** Guided, browser-accessible “rooms” with learning paths (e.g., Web Fundamentals, Offensive Pentesting, Blue Team, Cloud). Includes small VMs, step-by-step hints, badges and assessments.
+* **Strengths:** Beginner-friendly, gamified progression, clear learning paths.
+* **Weaknesses:** Labs are not always realistic production web apps; less emphasis on using professional GUIs like Burp until later paths.
+* **Cost:** Freemium — many rooms free; subscription unlocks pro rooms, VMs and extra features.
+
+---
+
+### 🔀 Other TryHackMe-style alternatives
+
+* [**Hack The Box (HTB)**](https://www.hackthebox.com/) — more advanced labs and boxes; leaning more to intermediate/advanced learners and realistic boxes; good for CTF-style training and red team practice.
+* [**PentesterLab**](https://pentesterlab.com/) — focused web-app exercises with detailed writeups; strong for web-app exploitation learning (commercial, some free content).
+* [**CyberSecLabs**](https://www.cyberseclabs.org/) — enterprise training ranges: used for team training and blue/red scenarios; often paid and enterprise-oriented.
+* [**OverTheWire**](https://overthewire.org/wargames/) — free community CTFs and VM images for offline practice; excellent for challenge-based learning and lab creation.
+* [**Offensive Security Proving Grounds (OSCP labs)**](https://www.offsec.com/products/proving-grounds/) — realistic, professional-level pentest sandbox for exam prep (paid, advanced).
+
+---
+
+## 🔁 Burp Suite alternatives
+
+### **OWASP ZAP (Zed Attack Proxy)**
+
+Open-source DAST/proxy scanner that’s beginner-friendly, scriptable and widely used in education and CI pipelines. Best if you want a free, community-supported tool for automated and manual testing.
+
+**Pros:** Free, active community, good automation/scripting.
+**Cons:** Some advanced manual features are weaker than Burp Pro.
+
+---
+
+### **Invicti (formerly Netsparker)**
+
+Commercial enterprise-grade web & API scanner focusing on high-accuracy, proof-based detection and SDLC/DevSecOps integration — strong for teams that need automated, low-noise scanning at scale.
+
+**Pros:** Accurate verification, enterprise-scale reporting & triage.
+**Cons:** Commercial cost; heavier than a manual pentest tool.
+
+---
+
+### **Acunetix (by Invicti)**
+
+Commercial automated web scanner with strong crawling and detection for modern apps (including SPA/API). Good when you want fast automated coverage and developer-friendly remediation reports.
+
+**Pros:** Strong crawling, developer reports, CI/CD integrations.
+**Cons:** Commercial licensing; can produce false positives depending on use.
+
+---
+
+### **Specialized tools & smaller alternatives**
+
+* **Nikto** — simple webserver scanner (good for labs).
+* **Wfuzz / ffuf** — powerful fuzzing for custom exploit discovery.
+* **Qualys / Veracode / Checkmarx** — enterprise suites for DAST/SAST where policy & compliance matter. 
 
 ---
 
@@ -256,7 +322,6 @@ Interactive labs covering:
 ## 🌟 Takeaway
 > 💬 “Security isn’t one tool or one list — it’s a continuous learning process combining awareness, classification, and action.”
 
-🔒 **Use CyBOK + OWASP + CWE + CVE + PortSwigger** →  
-you get a **holistic cybersecurity mindset** that blends **education, practice, and real-world defense**.
+🔒 **Use CyBOK + OWASP + CWE + CVE + PortSwigger** →  you get a **holistic cybersecurity mindset** that blends **education, practice, and real-world defense**.
 
 ---
