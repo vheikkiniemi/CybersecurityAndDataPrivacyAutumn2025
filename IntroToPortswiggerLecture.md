@@ -195,7 +195,7 @@ Interactive labs covering:
 
 ## 💼 Portswigger and alternatives
 
-🛠️  **PortSwigger (Burp Suite + Web Security Academy)** = hands-on *tool + guided labs* focused on web application security and pentesting workflows. Best for teaching *how to test and fix* web apps, and for manual/automated testing practice.
+🛠️  **PortSwigger (Burp Suite + Web Security Academy)** = hands-on *tool + guided labs* focused on web application security and pentesting workflows → *how to test and fix* web apps, and for manual/automated testing practice.
 
 * **TryHackMe & similar platforms** = *learning platforms / CTF-style labs* offering structured learning paths across many domains (web, infra, forensics, crypto). Best for onboarding newcomers, gamified practice, and broad blue/red team skill-building.
 * Use them together: **TryHackMe for broad skill-building and motivation → PortSwigger for deep, professional web-app testing skills.**
