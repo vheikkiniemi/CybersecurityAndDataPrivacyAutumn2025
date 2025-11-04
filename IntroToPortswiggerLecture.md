@@ -60,6 +60,7 @@ Three key ecosystems work together to achieve this:
 **Purpose:** Public list of confirmed cybersecurity vulnerabilities.  
 **Maintained by:** [MITRE](https://www.mitre.org/)  
 **Linked database:** [NVD (National Vulnerability Database)](http://nvd.nist.gov/)
+**CVE database**: [CVEdetails](https://www.cvedetails.com/)
 
 ### 🧠 Example
 - **[CVE-2022-22965: Spring4Shell](https://www.cve.org/CVERecord?id=CVE-2022-22965)**  
