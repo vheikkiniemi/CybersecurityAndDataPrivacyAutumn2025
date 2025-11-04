@@ -203,8 +203,7 @@ Interactive labs covering:
 
 ### 🧩 TryHackMe — what it is & where it shines
 
-> [**TryHackMe**](https://tryhackme.com/)
-
+* [**TryHackMe**](https://tryhackme.com/)
 * **What:** Guided, browser-accessible “rooms” with learning paths (e.g., Web Fundamentals, Offensive Pentesting, Blue Team, Cloud). Includes small VMs, step-by-step hints, badges and assessments.
 * **Strengths:** Beginner-friendly, gamified progression, clear learning paths.
 * **Weaknesses:** Labs are not always realistic production web apps; less emphasis on using professional GUIs like Burp until later paths.
