@@ -226,28 +226,25 @@ Interactive labs covering:
 
 ### **OWASP ZAP (Zed Attack Proxy)**
 
-Open-source DAST/proxy scanner that’s beginner-friendly, scriptable and widely used in education and CI pipelines. Best if you want a free, community-supported tool for automated and manual testing.
-
-**Pros:** Free, active community, good automation/scripting.
-**Cons:** Some advanced manual features are weaker than Burp Pro.
+* Open-source DAST/proxy scanner that’s beginner-friendly, scriptable and widely used in education and CI pipelines. Best if you want a free, community-supported tool for automated and manual testing.
+* **Pros:** Free, active community, good automation/scripting.
+* **Cons:** Some advanced manual features are weaker than Burp Pro.
 
 ---
 
 ### **Invicti (formerly Netsparker)**
 
-Commercial enterprise-grade web & API scanner focusing on high-accuracy, proof-based detection and SDLC/DevSecOps integration — strong for teams that need automated, low-noise scanning at scale.
-
-**Pros:** Accurate verification, enterprise-scale reporting & triage.
-**Cons:** Commercial cost; heavier than a manual pentest tool.
+* Commercial enterprise-grade web & API scanner focusing on high-accuracy, proof-based detection and SDLC/DevSecOps integration — strong for teams that need automated, low-noise scanning at scale.
+* **Pros:** Accurate verification, enterprise-scale reporting & triage.
+* **Cons:** Commercial cost; heavier than a manual pentest tool.
 
 ---
 
 ### **Acunetix (by Invicti)**
 
-Commercial automated web scanner with strong crawling and detection for modern apps (including SPA/API). Good when you want fast automated coverage and developer-friendly remediation reports.
-
-**Pros:** Strong crawling, developer reports, CI/CD integrations.
-**Cons:** Commercial licensing; can produce false positives depending on use.
+* Commercial automated web scanner with strong crawling and detection for modern apps (including SPA/API). Good when you want fast automated coverage and developer-friendly remediation reports.
+* **Pros:** Strong crawling, developer reports, CI/CD integrations.
+* **Cons:** Commercial licensing; can produce false positives depending on use.
 
 ---
 
