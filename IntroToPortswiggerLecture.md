@@ -59,7 +59,7 @@ Three key ecosystems work together to achieve this:
 **Full Name:** *Common Vulnerabilities and Exposures*  
 **Purpose:** Public list of confirmed cybersecurity vulnerabilities.  
 **Maintained by:** [MITRE](https://www.mitre.org/)  
-**Linked database:** [NVD (National Vulnerability Database)](http://nvd.nist.gov/)
+**Linked database:** [NVD (National Vulnerability Database)](http://nvd.nist.gov/)  
 **CVE database**: [CVEdetails](https://www.cvedetails.com/)
 
 ### 🧠 Example
