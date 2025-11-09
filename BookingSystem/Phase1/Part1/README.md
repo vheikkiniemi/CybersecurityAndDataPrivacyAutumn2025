@@ -9,9 +9,9 @@
 ```
 services:
   database:
-    image: vheikkiniemi/cybersec-db-phase1:v1.1
+    image: vheikkiniemi/cybersec-db-phase1-part1:v1.0
     restart: always
-    container_name: cybersec-db-phase1
+    container_name: cybersec-db-phase1-part1
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: Secret1234!
@@ -19,10 +19,10 @@ services:
     ports:
       - "5432:5432"
     volumes:
-      - postgres_data:/var/lib/postgresql/data
+      - pgroot:/var/lib/postgresql
   web:
-    image: vheikkiniemi/cybersec-web-phase1:v1.1
-    container_name: cybersec-web-phase1
+    image: vheikkiniemi/cybersec-web-phase1-part1:v1.0
+    container_name: cybersec-web-phase1-part1
     restart: always
     ports:
       - "8000:8000"
@@ -34,7 +34,7 @@ services:
       - "host.docker.internal:host-gateway"
 
 volumes:
-  postgres_data:
+  pgroot: {}
 ```
 
 **2. Try to build and run: `docker compose up --build -d`**  
