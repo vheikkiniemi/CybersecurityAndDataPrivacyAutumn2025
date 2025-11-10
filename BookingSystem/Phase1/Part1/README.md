@@ -116,7 +116,7 @@ Perform penetration testing and write a **report** ([Check the template report](
 
 # 🛡️ Quick guide to safe pen-testing
 
-**🔎 What is a penetration test?**
+## 🔎 What is a penetration test?
 
 A penetration test (pen test) is a controlled simulation of attacks against a system to find security problems **before** real attackers do. It includes planning, scanning, trying exploits (only when allowed), and writing a clear report with evidence and fixes.
 
@@ -186,7 +186,7 @@ In **both options**, you will use [this compose file](https://raw.githubusercont
 
 ## 🖥️ Your own environment (Docker on your machine or in Kali) 
 
-**Prerequisites:**
+**Prerequisites**
 
 * Docker Desktop (Windows/Mac) or Docker Engine (Linux)
 * A terminal (PowerShell, Terminal, bash)
@@ -198,7 +198,7 @@ In **both options**, you will use [this compose file](https://raw.githubusercont
 * Use VirtualBox / VMware / Hyper-V.
 * Inside the VM: install Kali (or Debian/Ubuntu plus tools) and Docker to run vulnerable apps and tools.
 
-**Quick steps:**
+**Quick steps**
 
 **1. Download Kali ISO: [https://www.kali.org](https://www.kali.org) (instructor will provide link / checksum).**  
 **2. Create VM in VirtualBox**  
@@ -254,9 +254,18 @@ docker compose down -v
 ```
 **10. Test with penetration test tools (e.g. ZAP)**
 
+**11. Quick troubleshooting**
+
+* **“Ports already in use”** → stop whatever uses the port, or change mapping in an override.
+* **Container restarts** → `docker logs <service-name>` and check environment variables or volumes.
+* **App not reachable** → confirm the port mapping and URL, run `docker compose ps`.
+* **ZAP not responding** → confirm it’s bound to `127.0.0.1:8080` and not blocked by firewall.
+
+---
+
 ### 🐳 Windows + Docker Desktop
 
-**Prerequisites:**
+**Prerequisites**
 
 * Windows 10/11 (recent build).
 * Docker Desktop installed (use WSL2 backend on Windows).
@@ -302,7 +311,7 @@ cd $HOME\cyber-lab\phase1-part1
 Invoke-WebRequest -Uri "https://raw.githubusercontent.com/vheikkiniemi/CybersecurityAndDataPrivacyAutumn2025/refs/heads/main/BookingSystem/Phase1/Part1/docker-compose.yml" -OutFile docker-compose.yml
 ```
 
-**5. Start the lab stack (run as regular user):**
+**5. Start the lab stack (run as regular user)**
 
 ```powershell
 docker compose up -d
@@ -311,7 +320,9 @@ docker compose ps
 
 Wait until services show `Up`. Open any mapped URLs in your browser (usually `http://localhost:8000`). Check the compose file for exact ports.
 
-**6. Stop & cleanup**
+**6. Test with penetration test tools (e.g. ZAP)**
+
+**7. Stop & cleanup**
 
 ```powershell
 # stop, keep volumes
@@ -321,18 +332,78 @@ docker compose down
 docker compose down -v
 ```
 
-**7. Quick troubleshooting**
+**8. Quick troubleshooting**
 
 * `docker compose` not found → restart Docker Desktop; ensure PATH is updated.
 * Permission / access denied → you probably need to log out/in after adding to `docker-users`. Reboot if needed.
 * Ports already in use → run `Get-Process -Id (Get-NetTCPConnection -LocalPort <port>).OwningProcess` or change mappings in an override.
 * Container health problems → `docker logs <service-name>` and `docker compose ps`.
 
-**8. Safety reminders**
+---
 
-* Make sure compose file and any override do **not** publish ports to the public network (bind to `127.0.0.1` when possible).
-* Keep snapshots / backups of any data you need.
-* Only test targets listed in your RoE.
+### 🍎 macOS + Docker
+
+**1. Prerequisites**
+
+* macOS (recent Big Sur / Monterey / Ventura or later).
+* Docker Desktop for Mac (use the Apple Silicon build on M1/M2, or Intel build on Intel Macs).
+* Terminal (zsh/bash).
+* `curl` or `wget` (curl exists by default).
+* (Optional) Homebrew for installing tools.
+
+**2. Install Docker Desktop**
+
+* Download & install Docker Desktop for Mac from Docker website.
+* Start Docker Desktop and wait until the whale icon shows “Docker is running.”
+* On first run Docker may request system permissions (network, virtualization). Accept those.
+* On Apple Silicon, prefer images built for `arm64`; if an image lacks arm builds you can run `--platform linux/amd64` (see notes below).
+
+**3. Create a working folder & download the compose file**
+
+Open Terminal:
+
+```bash
+mkdir -p ~/cyber-lab/phase1-part1
+cd ~/cyber-lab/phase1-part1
+
+# download compose file
+curl -fsSLo docker-compose.yml "https://raw.githubusercontent.com/vheikkiniemi/CybersecurityAndDataPrivacyAutumn2025/refs/heads/main/BookingSystem/Phase1/Part1/docker-compose.yml"
+```
+
+**4. Start the stack**
+
+```bash
+docker compose up -d
+docker compose ps
+```
+
+Wait until services are `Up`. Open the app URLs in your browser (check `docker-compose.yml` for ports — usually `http://localhost:<port>`).
+
+**5. Test with penetration test tools (e.g. ZAP)**
+
+**6. Stop / reset:**
+
+```bash
+# stop containers (keep volumes/data)
+docker compose down
+
+# stop and remove volumes (fresh start)
+docker compose down -v
+```
+
+**7. Docker Desktop settings to check (if problems)**
+
+* **Resources**: increase memory/CPUs if containers are heavy.
+* **File Sharing** (older Docker versions): ensure the project folder is allowed to be mounted into containers.
+* **Use Rosetta**: not needed for Docker Desktop itself, but some CLI tools may behave differently on Intel images.
+
+**8. Quick troubleshooting**
+
+* **Docker not starting** → restart Docker Desktop; check `Docker Desktop > Troubleshoot` logs.
+* **Container keeps restarting** → `docker logs <service>` to see the error.
+* **Service unreachable** → `docker compose ps` and `docker inspect <container>` for port mapping; try `curl http://localhost:<port>` locally.
+* **Port already in use** → `lsof -i :<port>` to find conflicts or change port mapping in an override.
+* **Permission / file mount errors** → check Docker Desktop file-sharing settings.
 
 ---
 
