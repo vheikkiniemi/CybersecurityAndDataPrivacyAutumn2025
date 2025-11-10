@@ -422,11 +422,3 @@ docker compose down -v
 * **Local only:** Bind ports to `127.0.0.1` unless your instructor says otherwise.
 * **Privacy:** Do not collect real personal data.
 * **Clean up:** Use `docker compose down -v` to reset when done.
-
----
-
-## 🛠️ Quick troubleshooting 
-
-* **“Ports already in use”** → stop whatever uses the port, or change mapping in an override.
-* **Container restarts** → `docker logs <service-name>` and check environment variables or volumes.
-* **App not reachable** → confirm the port mapping and URL, run `docker compose ps`.
