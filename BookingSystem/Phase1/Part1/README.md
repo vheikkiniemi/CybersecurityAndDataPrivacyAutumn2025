@@ -135,13 +135,13 @@ You must **never** test systems you don’t have explicit permission to test. Do
 
 ## ✅ Short checklist — do this **before** running tests 
 
-1. ✍️ **Written RoE** signed by the system owner (targets, allowed tests, schedule, contacts). 
-2. 🔐 **Confirm ownership** of the target (account ID, tenant, or VM you control). 
-3. 📧 **Notify provider** if required (cloud hosts may ask you to notify/security-team). 
-4. 📍 **Limit scope**: test only listed hosts/IPs; exclude third parties. 
-5. 💾 **Backups & snapshots**: take them so you can revert after tests. 
-6. ☎️ **Emergency contacts**: ops, instructor, legal — reachable during tests. 
-7. 🔒 **Evidence plan**: where you store logs/screenshots and how they’re protected.
+✍️ **Written RoE** signed by the system owner (targets, allowed tests, schedule, contacts). 
+🔐 **Confirm ownership** of the target (account ID, tenant, or VM you control). 
+📧 **Notify provider** if required (cloud hosts may ask you to notify/security-team). 
+📍 **Limit scope**: test only listed hosts/IPs; exclude third parties. 
+💾 **Backups & snapshots**: take them so you can revert after tests. 
+☎️ **Emergency contacts**: ops, instructor, legal — reachable during tests. 
+🔒 **Evidence plan**: where you store logs/screenshots and how they’re protected.
 
 ---
 
@@ -149,19 +149,19 @@ You must **never** test systems you don’t have explicit permission to test. Do
 
 Use isolated or purpose-built labs — do **not** test random internet sites.
 
-* Local VMs / Docker / VirtualBox (host-only networks). 🖥️
-* Institution-owned cloud tenant (only if you own it and have approvals). ☁️
-* Training platforms: **TryHackMe, Hack The Box, OWASP Juice Shop, DVWA** — safe and legal. 🧩
+🖥️ Local VMs / Docker / VirtualBox (host-only networks). 
+☁️ Institution-owned cloud tenant (only if you own it and have approvals). 
+🧩 Training platforms: **TryHackMe, Hack The Box, OWASP Juice Shop, DVWA** — safe and legal. 
 
 ---
 
 ## 🧰 What tools & actions are normally OK (with permission) 
 
-* Passive recon (public info, DNS) — low risk. 🌐
-* Authenticated scans (when you have credentials) — medium risk. 🔑
-* Vulnerability scans — OK if scoped and scheduled. ⚠️
-* Manual exploitation — only in lab/snapshotted environments or with explicit permission. 🔥
-* DoS or wide network sweeps — usually forbidden. ❌
+🌐 Passive recon (public info, DNS) — low risk. 
+🔑 Authenticated scans (when you have credentials) — medium risk. 
+⚠️ Vulnerability scans — OK if scoped and scheduled. 
+🔥 Manual exploitation — only in lab/snapshotted environments or with explicit permission. 
+❌ DoS or wide network sweeps — usually forbidden. 
 
 ---
 
@@ -175,7 +175,7 @@ Great — here’s a clear, student-facing step-by-step guide for **setting up a
 
 ---
 
-# Student guide — setting up your pen-test lab 🧰🔒
+# 🧰 Setting up your pen-test lab 
 
 **You have two lab options:**
 
@@ -188,7 +188,7 @@ In **both options**, you will use [this compose file](https://raw.githubusercont
 
 ---
 
-## A) Your own environment (Docker on your machine or in Kali) 🖥️
+## 🖥️ A) Your own environment (Docker on your machine or in Kali) 
 
 **Prerequisites:**
 
@@ -197,7 +197,7 @@ In **both options**, you will use [this compose file](https://raw.githubusercont
 
 ---
 
-### A1 — VM approach (Kali + Docker) — overview
+### 🪟 A1 — VM approach (Kali + Docker)
 
 * Use VirtualBox / VMware / Hyper-V.
 * Inside the VM: install Kali (or Debian/Ubuntu plus tools) and Docker to run vulnerable apps and tools.
@@ -258,7 +258,7 @@ docker compose down -v
 ```
 **10. Test with penetration test tools (e.g. ZAP)**
 
-### A2 — Windows + Docker Desktop — overview 🪟🐳
+### 🐳 A2 — Windows + Docker Desktop
 
 **Prerequisites:**
 
@@ -340,7 +340,7 @@ docker compose down -v
 
 ---
 
-## B) Centria KyberLab 🏫
+## 🏫 B) Centria KyberLab 
 
 1. **Get access** via instructor/lab portal (you’ll receive credentials and lab rules).
 2. **Start the provided lab stack** (services are preconfigured).
@@ -349,7 +349,7 @@ docker compose down -v
 
 ---
 
-## Safety reminders ⚠️
+## ⚠️ Safety reminders 
 
 * **Scope & permission:** Only test local applications.
 * **No DoS:** Don’t run destructive tests unless explicitly allowed.
@@ -359,7 +359,7 @@ docker compose down -v
 
 ---
 
-## Quick troubleshooting 🛠️
+## 🛠️ Quick troubleshooting 
 
 * **“Ports already in use”** → stop whatever uses the port, or change mapping in an override.
 * **Container restarts** → `docker logs <service-name>` and check environment variables or volumes.
