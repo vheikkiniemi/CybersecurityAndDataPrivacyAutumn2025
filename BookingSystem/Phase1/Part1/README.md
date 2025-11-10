@@ -219,8 +219,6 @@ cd ~/cyber-lab/phase1-part1
 
 **6. Download the compose file**  
 
-**wget**
-
 ```bash
 wget -O docker-compose.yml \
 https://raw.githubusercontent.com/vheikkiniemi/CybersecurityAndDataPrivacyAutumn2025/refs/heads/main/BookingSystem/Phase1/Part1/docker-compose.yml
@@ -234,7 +232,7 @@ docker compose config
 
 This validates the file and shows the final config.
 
-**8. Start the lab**  
+**8. Start the lab stack**  
 
 ```bash
 docker compose up -d
@@ -243,7 +241,9 @@ docker compose ps
 
 Wait until all services show **“Up”**. Then open the app URLs shown in the compose file (commonly `http://localhost:8000`).
 
-**9. Stop / reset**  
+**9. Test with penetration test tools (e.g. ZAP)**
+
+**10. Stop / reset**  
 
 ```bash
 # Stop containers (keep data)
@@ -252,7 +252,6 @@ docker compose down
 # Stop and remove volumes (fresh start)
 docker compose down -v
 ```
-**10. Test with penetration test tools (e.g. ZAP)**
 
 **11. Quick troubleshooting**
 
@@ -370,7 +369,7 @@ cd ~/cyber-lab/phase1-part1
 curl -fsSLo docker-compose.yml "https://raw.githubusercontent.com/vheikkiniemi/CybersecurityAndDataPrivacyAutumn2025/refs/heads/main/BookingSystem/Phase1/Part1/docker-compose.yml"
 ```
 
-**4. Start the stack**
+**4. Start the lab stack**
 
 ```bash
 docker compose up -d
@@ -401,7 +400,7 @@ docker compose down -v
 
 * **Docker not starting** → restart Docker Desktop; check `Docker Desktop > Troubleshoot` logs.
 * **Container keeps restarting** → `docker logs <service>` to see the error.
-* **Service unreachable** → `docker compose ps` and `docker inspect <container>` for port mapping; try `curl http://localhost:<port>` locally.
+* **Service unreachable** → `docker compose ps` and `docker inspect <container>` for port mapping; try `curl http://localhost:8000` locally.
 * **Port already in use** → `lsof -i :<port>` to find conflicts or change port mapping in an override.
 * **Permission / file mount errors** → check Docker Desktop file-sharing settings.
 
