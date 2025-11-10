@@ -45,11 +45,11 @@
 
 > Fill in one row per finding. Focus on clarity and the most important issues.
 
-| ID | Severity | Finding | Description | Evidence / Proof | Recommendation |
-|------|-----------|----------|--------------|------------------|----------------|
-| F-01 | 🔴 Critical | SQL Injection in registration | Input field allows `' OR '1'='1` injection | Screenshot or sqlmap result | Use parameterized queries and validate inputs |
-| F-02 | 🟠 High | Session fixation | Session ID remains unchanged after login | Burp log or response headers | Regenerate session ID after login |
-| F-03 | 🟡 Medium | Weak password policy | Accepts passwords like "12345" | Screenshot of registration success | Require strong passwords and minimum length |
+| ID | Severity | Finding | Description | Evidence / Proof |
+|------|-----------|----------|--------------|------------------|
+| F-01 | 🔴 Critical | SQL Injection in registration | Input field allows `' OR '1'='1` injection | Screenshot or sqlmap result |
+| F-02 | 🟠 High | Session fixation | Session ID remains unchanged after login | Burp log or response headers |
+| F-03 | 🟡 Medium | Weak password policy | Accepts passwords like "12345" | Screenshot of registration success |
 
 ✅ **Tips:**  
 - Include up to 5 findings total.   
