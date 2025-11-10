@@ -135,13 +135,13 @@ You must **never** test systems you don’t have explicit permission to test. Do
 
 ## ✅ Short checklist — do this **before** running tests 
 
-✍️ **Written RoE** signed by the system owner (targets, allowed tests, schedule, contacts). 
-🔐 **Confirm ownership** of the target (account ID, tenant, or VM you control). 
-📧 **Notify provider** if required (cloud hosts may ask you to notify/security-team). 
-📍 **Limit scope**: test only listed hosts/IPs; exclude third parties. 
-💾 **Backups & snapshots**: take them so you can revert after tests. 
-☎️ **Emergency contacts**: ops, instructor, legal — reachable during tests. 
-🔒 **Evidence plan**: where you store logs/screenshots and how they’re protected.
+✍️ **Written RoE** signed by the system owner (targets, allowed tests, schedule, contacts).  
+🔐 **Confirm ownership** of the target (account ID, tenant, or VM you control).  
+📧 **Notify provider** if required (cloud hosts may ask you to notify/security-team).  
+📍 **Limit scope**: test only listed hosts/IPs; exclude third parties.  
+💾 **Backups & snapshots**: take them so you can revert after tests.  
+☎️ **Emergency contacts**: ops, instructor, legal — reachable during tests.  
+🔒 **Evidence plan**: where you store logs/screenshots and how they’re protected. 
 
 ---
 
@@ -149,29 +149,25 @@ You must **never** test systems you don’t have explicit permission to test. Do
 
 Use isolated or purpose-built labs — do **not** test random internet sites.
 
-🖥️ Local VMs / Docker / VirtualBox (host-only networks). 
-☁️ Institution-owned cloud tenant (only if you own it and have approvals). 
-🧩 Training platforms: **TryHackMe, Hack The Box, OWASP Juice Shop, DVWA** — safe and legal. 
+🖥️ Local VMs / Docker / VirtualBox (host-only networks).  
+☁️ Institution-owned cloud tenant (only if you own it and have approvals).  
+🧩 Training platforms: **TryHackMe, Hack The Box, OWASP Juice Shop, DVWA** — safe and legal.  
 
 ---
 
 ## 🧰 What tools & actions are normally OK (with permission) 
 
-🌐 Passive recon (public info, DNS) — low risk. 
-🔑 Authenticated scans (when you have credentials) — medium risk. 
-⚠️ Vulnerability scans — OK if scoped and scheduled. 
-🔥 Manual exploitation — only in lab/snapshotted environments or with explicit permission. 
-❌ DoS or wide network sweeps — usually forbidden. 
+🌐 Passive recon (public info, DNS) — low risk.  
+🔑 Authenticated scans (when you have credentials) — medium risk.  
+⚠️ Vulnerability scans — OK if scoped and scheduled.  
+🔥 Manual exploitation — only in lab/snapshotted environments or with explicit permission.  
+❌ DoS or wide network sweeps — usually forbidden.  
 
 ---
 
 ## 📝 Short RoE example sentence you can copy 
 
 > “I request written authorization to perform controlled penetration testing on `vm-lab.example.local (10.0.0.10)` during 2025-11-25 09:00–16:00. Allowed activities: passive discovery, authenticated scanning, and controlled exploitation of intentionally vulnerable components. Not allowed: denial-of-service, testing of other tenants, or access to real user data. Contact: Instructor Name, +358 50 XXX XXXX.”
-
----
-
-Great — here’s a clear, student-facing step-by-step guide for **setting up a safe testing environment**. It covers both options you requested: **(A) your own environment** and **(B) Centria KyberLab**. Written in plain English with emojis, quick commands, and small templates students can copy.
 
 ---
 
