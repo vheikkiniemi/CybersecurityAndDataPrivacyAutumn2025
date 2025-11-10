@@ -126,22 +126,22 @@ A penetration test (pen test) is a controlled simulation of attacks against a sy
 
 You must **never** test systems you don’t have explicit permission to test. Doing so can be illegal and/or break contracts.
 
-* **Get written permission.** If you don’t have a signed Rules-of-Engagement (RoE), don’t test. ✍️
-* **Cloud providers:** Many providers (Azure, AWS, Google Cloud, etc.) **restrict** testing that affects shared infrastructure or other tenants. If a site is hosted on Azure, that **doesn’t automatically** give permission to test it — check the provider rules and the owner’s authorization. Your interpretation was sensible: providers often forbid aggressive or cross-tenant tests, but owners can usually test their *own* resources if they follow provider policies. ✅
-* **No DoS unless explicitly allowed.** Flooding or destructive tests are typically banned. ❌
+* **Get written permission.** If you don’t have a signed Rules-of-Engagement (RoE), don’t test.
+* **Cloud providers:** Many providers (Azure, AWS, Google Cloud, etc.) **restrict** testing that affects shared infrastructure or other tenants. If a site is hosted on Azure, that **doesn’t automatically** give permission to test it — check the provider rules and the owner’s authorization. Your interpretation was sensible: providers often forbid aggressive or cross-tenant tests, but owners can usually test their *own* resources if they follow provider policies.
+* **No DoS unless explicitly allowed.** Flooding or destructive tests are typically banned.
 * **Personal data (GDPR/privacy):** Avoid real user data; if you must touch it, document lawful basis and protect evidence.
 
 ---
 
 ## ✅ Short checklist — do this **before** running tests 
 
-1. **Written RoE** signed by the system owner (targets, allowed tests, schedule, contacts). ✍️
-2. **Confirm ownership** of the target (account ID, tenant, or VM you control). 🔐
-3. **Notify provider** if required (cloud hosts may ask you to notify/security-team). 📧
-4. **Limit scope**: test only listed hosts/IPs; exclude third parties. 📍
-5. **Backups & snapshots**: take them so you can revert after tests. 💾
-6. **Emergency contacts**: ops, instructor, legal — reachable during tests. ☎️
-7. **Evidence plan**: where you store logs/screenshots and how they’re protected. 🗂️🔒
+1. ✍️ **Written RoE** signed by the system owner (targets, allowed tests, schedule, contacts). 
+2. 🔐 **Confirm ownership** of the target (account ID, tenant, or VM you control). 
+3. 📧 **Notify provider** if required (cloud hosts may ask you to notify/security-team). 
+4. 📍 **Limit scope**: test only listed hosts/IPs; exclude third parties. 
+5. 💾 **Backups & snapshots**: take them so you can revert after tests. 
+6. ☎️ **Emergency contacts**: ops, instructor, legal — reachable during tests. 
+7. 🔒 **Evidence plan**: where you store logs/screenshots and how they’re protected.
 
 ---
 
