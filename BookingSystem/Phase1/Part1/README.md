@@ -116,7 +116,7 @@ Perform penetration testing and write a **report** ([Check the template report](
 
 # 🛡️ Quick guide to safe pen-testing
 
-## 🔎 What is a penetration test?
+**🔎 What is a penetration test?**
 
 A penetration test (pen test) is a controlled simulation of attacks against a system to find security problems **before** real attackers do. It includes planning, scanning, trying exploits (only when allowed), and writing a clear report with evidence and fixes.
 
