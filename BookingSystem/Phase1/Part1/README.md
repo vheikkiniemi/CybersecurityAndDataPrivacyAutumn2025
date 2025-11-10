@@ -47,49 +47,45 @@ In this context, it can mean **illogical or inconsistent system behavior**.
 
 ---
 
-## 🧪 Penetration Testing Focus Areas
+## 🧪 Penetration Testing Focus Areas (if the area is relevant for testing)
 
-Perform penetration testing and write a **report** ([Check the template report](test_report_template.md)).
-
----
-
-### 1. Authentication and Authorization
+**1. Authentication and Authorization**
 
 * Verify that user register processes are **secure**.
 * Verify that user login processes are **secure**.
 * Check that **roles and permissions** are properly defined and cannot be bypassed.
 
-### 2. Input Validation
+**2. Input Validation**
 
 * Ensure that **all user inputs** are validated and sanitized.
 * Look for possible **injection attacks** (e.g., SQLi, XSS).
 
-### 3. Session Management
+**3. Session Management**
 
 * Confirm that **sessions expire properly** and cannot be hijacked.
 * Check that **session tokens** are complex and unpredictable.
 
-### 4. Data Encryption
+**4. Data Encryption**
 
 * Verify that sensitive data is **encrypted** both **in transit** and **at rest**.
 * Ensure encryption algorithms are **up to date and secure**.
 
-### 5. Error Handling and Logging
+**5. Error Handling and Logging**
 
 * Test that **error messages** do not expose sensitive information.
 * Ensure **log files** contain enough information for incident tracing but avoid storing personal data.
 
-### 6. Third-Party Components
+**6. Third-Party Components**
 
 * Review **external libraries and dependencies** for vulnerabilities.
 * Check that third-party tools are **current and trustworthy**.
 
-### 7. Usability and Performance
+**7. Usability and Performance**
 
 * Test that the system performs reliably under **load**.
 * Evaluate **user experience** and whether security controls overly hinder usability.
 
-### 8. GDPR Compliance
+**8. GDPR Compliance**
 
 | Aspect                                | What to Test                                                    |
 | ------------------------------------- | --------------------------------------------------------------- |
@@ -100,7 +96,7 @@ Perform penetration testing and write a **report** ([Check the template report](
 | **Transparency**                      | Privacy policies are clear, accessible, and understandable.     |
 | **Access Control**                    | Only authorized personnel can access personal data.             |
 
-### 9. Privacy by Design (PbD) Principles
+**9. Privacy by Design (PbD) Principles**
 
 1. **Proactive, not reactive:** anticipate privacy risks before they occur.
 2. **Privacy as the default setting:** data protection enabled by default.
@@ -112,9 +108,9 @@ Perform penetration testing and write a **report** ([Check the template report](
 
 ---
 
-## 🧾 Penetration Testing Report Structure
+## 🧾 Penetration Testing and the report Structure
 
-[Check the template report](test_report_template.md)
+Perform penetration testing and write a **report** ([Check the template report](test_report_template.md)).
 
 ---
 
