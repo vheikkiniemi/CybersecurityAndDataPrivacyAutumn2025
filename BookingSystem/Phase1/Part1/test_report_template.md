@@ -1,7 +1,7 @@
 # 1️⃣ Introduction
 
 **Purpose:**  
-Describe the purpose of this test (e.g., identify vulnerabilities in registration and authentication flows).
+- Describe the purpose of this test (e.g., identify vulnerabilities in registration and authentication flows).
 
 **Scope:**  
 - Tested components:  
@@ -41,12 +41,12 @@ Describe the purpose of this test (e.g., identify vulnerabilities in registratio
 
 ---
 
-# 4️⃣ Findings (simplified table)
+# 4️⃣ Findings (filled with examples → replace)
 
 > Fill in one row per finding. Focus on clarity and the most important issues.
 
 | ID | Severity | Finding | Description | Evidence / Proof | Recommendation |
-|----|-----------|----------|--------------|------------------|----------------|
+|------|-----------|----------|--------------|------------------|----------------|
 | F-01 | 🔴 Critical | SQL Injection in registration | Input field allows `' OR '1'='1` injection | Screenshot or sqlmap result | Use parameterized queries and validate inputs |
 | F-02 | 🟠 High | Session fixation | Session ID remains unchanged after login | Burp log or response headers | Regenerate session ID after login |
 | F-03 | 🟡 Medium | Weak password policy | Accepts passwords like "12345" | Screenshot of registration success | Require strong passwords and minimum length |
@@ -60,18 +60,18 @@ Describe the purpose of this test (e.g., identify vulnerabilities in registratio
 # 5️⃣ OWASP ZAP Test Report (Attachment)
 
 **Purpose:**  
-Attach or link your OWASP ZAP scan results (Markdown format preferred).
+- Attach or link your OWASP ZAP scan results (Markdown format preferred).
 
 **Instructions:**
 1. Run OWASP ZAP baseline scan:  
    ```bash
-   zap-baseline.py -t https://example.com -r zap_report.html -J zap_report.json
+   zap-baseline.py -t https://example.com -r zap_report_round1.html -J zap_report.json
    ```
 2. Export results to markdown:  
    ```bash
-   zap-cli report -o zap_report.md -f markdown
+   zap-cli report -o zap_report_round1.md -f markdown
    ```
-3. Save the report as `evidence/zap_report.md` and link it below.
+3. Save the report as `zap_report_round1.md` and link it below.
 
 ### ZAP Summary Table
 
@@ -82,7 +82,7 @@ Attach or link your OWASP ZAP scan results (Markdown format preferred).
 | 🟡 Low |   |   |   |
 | ⚪ Info |   |   |   |
 
-📁 **Attach full report:** `[View ZAP report](zap_report.md)`
+📁 **Attach full report:** `[View ZAP report](zap_report_round1.md)`
 
 ---
 
