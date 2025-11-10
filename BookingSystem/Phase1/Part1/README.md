@@ -3,7 +3,7 @@
 > [!NOTE]
 > The material was created with the help of ChatGPT and Copilot.
 
-## Starting Point
+## 💡 Starting Point
 
 You are a **junior penetration tester** working for a cybersecurity company.
 Your company has been contracted to test the following software system:
@@ -33,7 +33,7 @@ Your task is to identify as many **anomalies** and **vulnerabilities** as possib
 
 ---
 
-### 🔍 Key Terms
+## 🔍 Key Terms
 
 **Anomaly:**
 
@@ -175,8 +175,8 @@ Use isolated or purpose-built labs — do **not** test random internet sites.
 
 **You have two lab options:**
 
-* **A) Your own environment** (Docker on your machine or in Kali)
-* **B) Centria KyberLab** (institutional lab; follow lab rules)
+* **Your own environment** (Docker on your machine or in Kali)
+* **Centria KyberLab** (institutional lab; follow lab rules)
 
 In **both options**, you will use [this compose file](https://raw.githubusercontent.com/vheikkiniemi/CybersecurityAndDataPrivacyAutumn2025/refs/heads/main/BookingSystem/Phase1/Part1/docker-compose.yml) for Phase 1, Part 1
 
@@ -184,7 +184,7 @@ In **both options**, you will use [this compose file](https://raw.githubusercont
 
 ---
 
-## 🖥️ A) Your own environment (Docker on your machine or in Kali) 
+## 🖥️ Your own environment (Docker on your machine or in Kali) 
 
 **Prerequisites:**
 
@@ -193,7 +193,7 @@ In **both options**, you will use [this compose file](https://raw.githubusercont
 
 ---
 
-### 🪟 A1 — VM approach (Kali + Docker)
+### 🪟 VM approach (Kali + Docker)
 
 * Use VirtualBox / VMware / Hyper-V.
 * Inside the VM: install Kali (or Debian/Ubuntu plus tools) and Docker to run vulnerable apps and tools.
@@ -254,7 +254,7 @@ docker compose down -v
 ```
 **10. Test with penetration test tools (e.g. ZAP)**
 
-### 🐳 A2 — Windows + Docker Desktop
+### 🐳 Windows + Docker Desktop
 
 **Prerequisites:**
 
@@ -336,7 +336,7 @@ docker compose down -v
 
 ---
 
-## 🏫 B) Centria KyberLab 
+## 🏫 Centria KyberLab 
 
 1. **Get access** via instructor/lab portal (you’ll receive credentials and lab rules).
 2. **Start the provided lab stack** (services are preconfigured).
