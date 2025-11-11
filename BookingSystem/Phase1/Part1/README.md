@@ -429,3 +429,132 @@ docker compose down -v
 * **Local only:** Bind ports to `127.0.0.1` unless your instructor says otherwise.
 * **Privacy:** Do not collect real personal data.
 * **Clean up:** Use `docker compose down -v` to reset when done.
+
+---
+
+# 🧩 System Overview — Phase 1 / Part 1 Environment 
+
+When you start the stack using
+
+```bash
+docker compose up -d
+```
+
+from
+`https://raw.githubusercontent.com/vheikkiniemi/CybersecurityAndDataPrivacyAutumn2025/refs/heads/main/BookingSystem/Phase1/Part1/docker-compose.yml`,
+you deploy a **small web application** and a **PostgreSQL database** inside isolated Docker containers.
+
+---
+
+## 🌐 Application access 
+
+Once the containers are running, you can open the web application in your browser at:
+
+```
+http://<IP address>:8000
+```
+
+**What you will see:**
+
+* A simple **booking system** interface that allows user registration.
+
+> 💡 The application is intentionally minimal so you can focus on testing registration
+
+---
+
+## 2. Database access (PostgreSQL) 🗄️
+
+A PostgreSQL container runs alongside the web application. You can open an interactive SQL shell directly into the database using this command:
+
+```bash
+docker exec -it cybersec-db-phase1-part1 psql -U postgres -d postgres
+```
+
+Explanation:
+
+* `docker exec -it` → runs a command inside the running database container.
+* `cybersec-db-phase1-part1` → the container name defined in the compose file.
+* `-U postgres` → login as the default PostgreSQL superuser.
+* `-d postgres` → connect to the default database.
+
+If the connection is successful, you’ll see the PostgreSQL prompt:
+
+```
+postgres=#
+```
+
+---
+
+## 🧠 Exploring the database schema 
+
+Inside the PostgreSQL shell, you can list all tables with:
+
+```sql
+\dt
+```
+
+This shows the current tables in the application’s database — for example:
+
+```
+   List of relations
+ Schema |      Name       | Type  |  Owner
+--------+-----------------+-------+----------
+ public | booking_users   | table | postgres
+ public | booking_items   | table | postgres
+```
+
+---
+
+## 👥 Viewing user data 
+
+The application stores registered users in the table `booking_users`.
+To view all user records:
+
+```sql
+SELECT * FROM booking_users;
+```
+
+You’ll see the current users, including those created during testing (e.g., when you register a new user through the web interface).
+
+---
+
+## 🧹 Cleaning up test users 
+
+During testing, you may create many dummy accounts.
+You can safely delete them with this SQL command:
+
+```sql
+DELETE FROM booking_users;
+```
+
+This clears the table but leaves the structure intact.
+
+> ⚠️ **Be careful:** this command removes *all* users from the system. Only use it inside your lab environment — never on a production database.
+
+---
+
+## 🚪 Summary of key access points 
+
+| Component         | Access Method                                                           | Description                                                  |
+| ----------------- | ----------------------------------------------------------------------- | ------------------------------------------------------------ |
+| 🖥️ Web App       | `http://localhost:8000`                                                 | Booking system interface (register, login, manage resources) |
+| 🐘 Database Shell | `docker exec -it cybersec-db-phase1-part1 psql -U postgres -d postgres` | Open PostgreSQL interpreter inside the DB container          |
+| 📋 List Tables    | `\dt`                                                                   | Shows all tables in the current database                     |
+| 👤 Show Users     | `SELECT * FROM booking_users;`                                          | Displays user accounts currently stored                      |
+| ❌ Delete Users    | `DELETE FROM booking_users;`                                            | Removes all users created during testing                     |
+
+---
+
+## ⚠️ (Again) Safe usage reminders 
+
+* Always run this stack locally or in an approved lab (Centria KyberLab).
+* Do **not** expose port 8000 to the public Internet.
+* Database actions are for testing and learning only — don’t use real personal data.
+* (Optional) Take screenshots or logs as evidence for your report
+* After experiments, reset the environment with:
+
+  ```bash
+  docker compose down -v
+  ```
+
+---
