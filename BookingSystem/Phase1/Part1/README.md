@@ -432,7 +432,7 @@ docker compose down -v
 
 ---
 
-# 🧩 System Overview — Phase 1 / Part 1 Environment 
+# 🧩 System Overview → Phase 1 / Part 1 Environment 
 
 When you start the stack using
 
@@ -440,7 +440,7 @@ When you start the stack using
 docker compose up -d
 ```
 
-from [this compose file](https://raw.githubusercontent.com/vheikkiniemi/CybersecurityAndDataPrivacyAutumn2025/refs/heads/main/BookingSystem/Phase1/Part1/docker-compose.yml)`, you deploy a **small web application** and a **PostgreSQL database** inside isolated Docker containers.
+from [this compose file](https://raw.githubusercontent.com/vheikkiniemi/CybersecurityAndDataPrivacyAutumn2025/refs/heads/main/BookingSystem/Phase1/Part1/docker-compose.yml), you deploy a **small web application** and a **PostgreSQL database** inside isolated Docker containers.
 
 ---
 
