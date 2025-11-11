@@ -30,19 +30,20 @@
 **Top 5 immediate actions:**  
 1.  
 2.  
-3.
-4.
-5.
+3.  
+4.  
+5.  
 
 ---
 
 # 3️⃣ Severity scale & definitions
 
-- **Critical** → Leads to full system compromise or data breach. *Immediate fix required.*  
-- **High** → Exposes sensitive data or enables privilege escalation. *Fix ASAP.*  
-- **Medium** → Requires specific conditions or user action. *Fix soon.*  
-- **Low** → Minor issue or misconfiguration. *Monitor and fix in maintenance.*  
-- **Informational** → No direct risk, but useful for hardening. *For awareness.*
+| Severity scale       | Description                                                                                                                  | Action                           |
+| -------------------- | ---------------------------------------------------------------------------------------------------------------------------- |----------------------------------|
+| 🔴 **High**          | A serious vulnerability that can lead to full system compromise or data breach (e.g., SQL Injection, Remote Code Execution). |*Immediate fix required*         |
+| 🟠 **Medium**        | A significant issue that may require specific conditions or user interaction (e.g., XSS, CSRF).                              |*Fix ASAP*                       |
+| 🟡 **Low**           | A minor issue or configuration weakness (e.g., server version disclosure).                                                   |*Fix soon*                       |
+| 🔵 **Informational** | No direct risk, but useful for system hardening (e.g., missing security headers).                                            |*Monitor and fix in maintenance* |
 
 ---
 
@@ -52,13 +53,15 @@
 
 | ID | Severity | Finding | Description | Evidence / Proof |
 |------|-----------|----------|--------------|------------------|
-| F-01 | 🔴 Critical | SQL Injection in registration | Input field allows `' OR '1'='1` injection | Screenshot or sqlmap result |
-| F-02 | 🟠 High | Session fixation | Session ID remains unchanged after login | Burp log or response headers |
-| F-03 | 🟡 Medium | Weak password policy | Accepts passwords like "12345" | Screenshot of registration success |
+| F-01 | 🔴 High | SQL Injection in registration | Input field allows `' OR '1'='1` injection | Screenshot or sqlmap result |
+| F-02 | 🟠 Medium | Session fixation | Session ID remains unchanged after login | Burp log or response headers |
+| F-03 | 🟡 Low | Weak password policy | Accepts passwords like "12345" | Screenshot of registration success |
 
-✅ **Tips:**  
-- Include up to 5 findings total.   
-- Keep each description short and clear.
+---
+
+> [!NOTE]
+> Include up to 5 findings total.   
+> Keep each description short and clear.
 
 ---
 
@@ -81,7 +84,7 @@
 3. Save the report as `zap_report_round1.md` and link it below.
 
 ---
-
-📁 **Attach full report:** → `check itslearning` → **Add a link here**
+> [!NOTE]
+> 📁 **Attach full report:** → `check itslearning` → **Add a link here**
 
 ---

@@ -5,8 +5,7 @@
 
 ## 💡 Starting Point
 
-You are a **junior penetration tester** working for a cybersecurity company.
-Your company has been contracted to test the following software system:
+You are a **junior penetration tester** working for a cybersecurity company. Your company has been contracted to test the following software system:
 
 * The system is accessed via a **web browser**.
 * Users can **register** and, after registration, **log in**.
@@ -19,11 +18,9 @@ Your company has been contracted to test the following software system:
 * The client company requires the system to be **GDPR-compliant**.
 * The software developer claims to follow the principles of **Privacy by Design (PbD)**.
 
-The system is being developed in **phases**.
-In this first phase, you are testing **user registration** functionality.
+The system is being developed in **phases**. In this first phase, you are testing **user registration** functionality.
 
-You act as a **white-hat hacker**, using a **gray-box testing** approach.
-Your task is to identify as many **anomalies** and **vulnerabilities** as possible and **categorize** your findings.
+You act as a **white-hat hacker**, using a **gray-box testing** approach. Your task is to identify as many **anomalies** and **vulnerabilities** as possible and **categorize** your findings.
 
 📚 Helpful references:
 
@@ -35,15 +32,9 @@ Your task is to identify as many **anomalies** and **vulnerabilities** as possib
 
 ## 🔍 Key Terms
 
-**Anomaly:**
+**Anomaly:** Any deviation from an accepted guideline or standard practice. It may be intentional or accidental and might or might not affect security. In this context, it can mean **illogical or inconsistent system behavior**.
 
-Any deviation from an accepted guideline or standard practice.
-It may be intentional or accidental and might or might not affect security.
-In this context, it can mean **illogical or inconsistent system behavior**.
-
-**Vulnerability:**
-
-**weakness or security flaw** in a system that can be exploited by an attacker to gain unauthorized access or cause other harm.
+**Vulnerability:** **weakness or security flaw** in a system that can be exploited by an attacker to gain unauthorized access or cause other harm.
 
 ---
 
@@ -55,35 +46,49 @@ In this context, it can mean **illogical or inconsistent system behavior**.
 * Verify that user login processes are **secure**.
 * Check that **roles and permissions** are properly defined and cannot be bypassed.
 
+---
+
 **2. Input Validation**
 
 * Ensure that **all user inputs** are validated and sanitized.
 * Look for possible **injection attacks** (e.g., SQLi, XSS).
+
+---
 
 **3. Session Management**
 
 * Confirm that **sessions expire properly** and cannot be hijacked.
 * Check that **session tokens** are complex and unpredictable.
 
+---
+
 **4. Data Encryption**
 
 * Verify that sensitive data is **encrypted** both **in transit** and **at rest**.
 * Ensure encryption algorithms are **up to date and secure**.
+
+---
 
 **5. Error Handling and Logging**
 
 * Test that **error messages** do not expose sensitive information.
 * Ensure **log files** contain enough information for incident tracing but avoid storing personal data.
 
+---
+
 **6. Third-Party Components**
 
 * Review **external libraries and dependencies** for vulnerabilities.
 * Check that third-party tools are **current and trustworthy**.
 
+---
+
 **7. Usability and Performance**
 
 * Test that the system performs reliably under **load**.
 * Evaluate **user experience** and whether security controls overly hinder usability.
+
+---
 
 **8. GDPR Compliance**
 
@@ -95,6 +100,8 @@ In this context, it can mean **illogical or inconsistent system behavior**.
 | **User Rights**                       | Users can request deletion, correction, or data portability.    |
 | **Transparency**                      | Privacy policies are clear, accessible, and understandable.     |
 | **Access Control**                    | Only authorized personnel can access personal data.             |
+
+---
 
 **9. Privacy by Design (PbD) Principles**
 
