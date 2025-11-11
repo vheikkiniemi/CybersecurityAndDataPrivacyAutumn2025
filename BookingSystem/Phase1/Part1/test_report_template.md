@@ -1,5 +1,8 @@
 # 1️⃣ Introduction
 
+**Tester(s):**  
+- Name:  
+
 **Purpose:**  
 - Describe the purpose of this test (e.g., identify vulnerabilities in registration and authentication flows).
 
@@ -24,20 +27,22 @@
 
 **Overall risk level:** (Low / Medium / High / Critical)
 
-**Top 3 immediate actions:**  
+**Top 5 immediate actions:**  
 1.  
 2.  
 3.
+4.
+5.
 
 ---
 
 # 3️⃣ Severity scale & definitions
 
-- **Critical** — Leads to full system compromise or data breach. *Immediate fix required.*  
-- **High** — Exposes sensitive data or enables privilege escalation. *Fix ASAP.*  
-- **Medium** — Requires specific conditions or user action. *Fix soon.*  
-- **Low** — Minor issue or misconfiguration. *Monitor and fix in maintenance.*  
-- **Informational** — No direct risk, but useful for hardening. *For awareness.*
+- **Critical** → Leads to full system compromise or data breach. *Immediate fix required.*  
+- **High** → Exposes sensitive data or enables privilege escalation. *Fix ASAP.*  
+- **Medium** → Requires specific conditions or user action. *Fix soon.*  
+- **Low** → Minor issue or misconfiguration. *Monitor and fix in maintenance.*  
+- **Informational** → No direct risk, but useful for hardening. *For awareness.*
 
 ---
 
@@ -62,7 +67,9 @@
 **Purpose:**  
 - Attach or link your OWASP ZAP scan results (Markdown format preferred).
 
-**Instructions:**
+---
+
+**Instructions (CMD version):**
 1. Run OWASP ZAP baseline scan:  
    ```bash
    zap-baseline.py -t https://example.com -r zap_report_round1.html -J zap_report.json
@@ -73,26 +80,8 @@
    ```
 3. Save the report as `zap_report_round1.md` and link it below.
 
-### ZAP Summary Table
-
-| Risk Level | Alerts | Example Finding | URL |
-|-------------|---------|-----------------|-----|
-| 🔴 High |   |   |   |
-| 🟠 Medium |   |   |   |
-| 🟡 Low |   |   |   |
-| ⚪ Info |   |   |   |
-
-📁 **Attach full report:** `[View ZAP report](zap_report_round1.md)`
-
 ---
 
-# 6️⃣ Sign-off
+📁 **Attach full report:** → `check itslearning` → **Add a link here**
 
-**Tester(s):**  
-- Name:  
-- Signature / approval:  
-
-**Acceptance criteria for closure:**  
-- All Critical & High issues verified.  
-- Regression tests added.  
-- Privacy policy updated.
+---
