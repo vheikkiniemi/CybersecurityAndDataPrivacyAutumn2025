@@ -39,11 +39,11 @@
 # 3️⃣ Severity scale & definitions
 
 |  **Severity Level**  | **Description**                                                                                                              | **Recommended Action**           |
-| :------------------: | ---------------------------------------------------------------------------------------------------------------------------- | -------------------------------- |
+| -------------------- | ---------------------------------------------------------------------------------------------------------------------------- | -------------------------------- |
 |      🔴 **High**     | A serious vulnerability that can lead to full system compromise or data breach (e.g., SQL Injection, Remote Code Execution). | *Immediate fix required*         |
 |     🟠 **Medium**    | A significant issue that may require specific conditions or user interaction (e.g., XSS, CSRF).                              | *Fix ASAP*                       |
 |      🟡 **Low**      | A minor issue or configuration weakness (e.g., server version disclosure).                                                   | *Fix soon*                       |
-| 🔵 **Informational** | No direct risk, but useful for system hardening (e.g., missing security headers).                                            | *Monitor and fix in maintenance* |
+| 🔵 **Info** | No direct risk, but useful for system hardening (e.g., missing security headers).                                            | *Monitor and fix in maintenance* |
 
 
 ---
