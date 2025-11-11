@@ -440,9 +440,7 @@ When you start the stack using
 docker compose up -d
 ```
 
-from
-`https://raw.githubusercontent.com/vheikkiniemi/CybersecurityAndDataPrivacyAutumn2025/refs/heads/main/BookingSystem/Phase1/Part1/docker-compose.yml`,
-you deploy a **small web application** and a **PostgreSQL database** inside isolated Docker containers.
+from [this compose file](https://raw.githubusercontent.com/vheikkiniemi/CybersecurityAndDataPrivacyAutumn2025/refs/heads/main/BookingSystem/Phase1/Part1/docker-compose.yml)`, you deploy a **small web application** and a **PostgreSQL database** inside isolated Docker containers.
 
 ---
 
@@ -462,7 +460,7 @@ http://<IP address>:8000
 
 ---
 
-## 2. Database access (PostgreSQL) 🗄️
+## 🗄️ Database access (PostgreSQL) 
 
 A PostgreSQL container runs alongside the web application. You can open an interactive SQL shell directly into the database using this command:
 
@@ -500,7 +498,6 @@ This shows the current tables in the application’s database — for example:
  Schema |      Name       | Type  |  Owner
 --------+-----------------+-------+----------
  public | booking_users   | table | postgres
- public | booking_items   | table | postgres
 ```
 
 ---
