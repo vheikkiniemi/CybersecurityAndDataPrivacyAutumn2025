@@ -183,7 +183,7 @@ Use isolated or purpose-built labs — do **not** test random internet sites.
 **You have two lab options:**
 
 * **Your own environment** (Docker on your machine or in Kali)
-* **Centria KyberLab** (institutional lab; follow lab rules)
+* **Centria CyberLab** (institutional lab; follow lab rules)
 
 In **both options**, you will use [this compose file](https://raw.githubusercontent.com/vheikkiniemi/CybersecurityAndDataPrivacyAutumn2025/refs/heads/main/BookingSystem/Phase1/Part1/docker-compose.yml) for Phase 1, Part 1
 
@@ -234,7 +234,7 @@ https://raw.githubusercontent.com/vheikkiniemi/CybersecurityAndDataPrivacyAutumn
 **7. (Optional) Check what will run**  
 
 ```bash
-docker compose config
+sudo docker compose config
 ```
 
 This validates the file and shows the final config.
@@ -242,8 +242,8 @@ This validates the file and shows the final config.
 **8. Start the lab stack**  
 
 ```bash
-docker compose up -d
-docker compose ps
+sudo docker compose up -d
+sudo docker compose ps
 ```
 
 Wait until all services show **“Up”**. Then open the app URLs shown in the compose file (commonly `http://localhost:8000`).
@@ -254,16 +254,23 @@ Wait until all services show **“Up”**. Then open the app URLs shown in the c
 
 ```bash
 # Stop containers (keep data)
-docker compose down
+sudo docker compose down
+```
 
+```bash
 # Stop and remove volumes (fresh start)
-docker compose down -v
+sudo docker compose down -v
+```
+
+```bash
+# Stop and remove images (fresh start)
+sudo docker compose down --rmi
 ```
 
 **11. Quick troubleshooting**
 
 * **“Ports already in use”** → stop whatever uses the port, or change mapping in an override.
-* **Container restarts** → `docker logs <service-name>` and check environment variables or volumes.
+* **Container restarts** → `sudo docker logs <service-name>` and check environment variables or volumes.
 * **App not reachable** → confirm the port mapping and URL, run `docker compose ps`.
 * **ZAP not responding** → confirm it’s bound to `127.0.0.1:8080` and not blocked by firewall.
 
@@ -413,7 +420,7 @@ docker compose down -v
 
 ---
 
-## 🏫 Centria KyberLab 
+## 🏫 Centria CyberLab 
 
 1. **Get access** via instructor/lab portal (you’ll receive credentials and lab rules).
 2. **Start the provided lab stack** (services are preconfigured).
@@ -542,9 +549,68 @@ This clears the table but leaves the structure intact.
 
 ---
 
+## 📜 Using Logs
+
+You can view and monitor the output (logs) of your running Docker containers with the `docker logs` command.
+Logs are useful for debugging, monitoring performance, and confirming that services start correctly.
+
+---
+
+### 🧩 View web container logs
+
+```bash
+sudo docker logs cybersec-web-phase1-part1
+```
+
+Shows the existing log output from the **web application** container.
+
+---
+
+### 🔄 Follow web container logs in real time
+
+```bash
+sudo docker logs cybersec-web-phase1-part1 --follow
+```
+
+Displays new log entries as they appear (like `tail -f`).
+**Stop following:** press **Ctrl + C** to return to the command line.
+
+---
+
+### 🧩 View database container logs
+
+```bash
+sudo docker logs cybersec-db-phase1-part1
+```
+
+Shows the existing log output from the **database** container.
+
+---
+
+### 🔄 Follow database container logs in real time
+
+```bash
+sudo docker logs cybersec-db-phase1-part1 --follow
+```
+
+Streams live logs from the database container, useful for monitoring queries or connection attempts.
+**Stop following:** press **Ctrl + C**.
+
+---
+
+### ⚙️ Optional: limit the number of log lines
+
+```bash
+sudo docker logs cybersec-web-phase1-part1 --tail 100
+```
+
+Shows only the **last 100 lines** of logs — useful if the container has been running for a long time.
+
+---
+
 ## ⚠️ (Again) Safe usage reminders 
 
-* Always run this stack locally or in an approved lab (Centria KyberLab).
+* Always run this stack locally or in an approved lab (Centria CyberLab).
 * Do **not** expose port 8000 to the public Internet.
 * Database actions are for testing and learning only — don’t use real personal data.
 * (Optional) Take screenshots or logs as evidence for your report
