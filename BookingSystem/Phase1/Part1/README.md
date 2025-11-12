@@ -549,7 +549,7 @@ This clears the table but leaves the structure intact.
 
 ---
 
-## 📜 Using Logs
+## 📜 Using Logs (e.g. Kali)
 
 You can view and monitor the output (logs) of your running Docker containers with the `docker logs` command.
 Logs are useful for debugging, monitoring performance, and confirming that services start correctly.
