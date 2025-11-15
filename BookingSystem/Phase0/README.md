@@ -58,7 +58,7 @@ cd phase0
 wget https://raw.githubusercontent.com/vheikkiniemi/CybersecurityAndDataPrivacyAutumn2025/refs/heads/main/BookingSystem/Phase0/docker-compose.yml
 ```
 
-Or download the [`docker-compose.yml`](https://raw.githubusercontent.com/vheikkiniemi/CybersecurityAndDataPrivacyAutumn2025/refs/heads/main/BookingSystem/Phase0/docker-compose.yml) ohter ways into an empty folder.
+Or download the [`docker-compose.yml`](https://github.com/vheikkiniemi/CybersecurityAndDataPrivacyAutumn2025/blob/main/BookingSystem/Phase0/docker-compose.yml) other ways into an empty folder.
 
 ---
 
