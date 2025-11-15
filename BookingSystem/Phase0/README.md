@@ -50,7 +50,7 @@ http://localhost:8000
 
 ### 📁 The compose file
 
-Either clone the repository:
+Copy the compose file → **Debia-based command:**
 
 ```bash
 mkdir phase0
@@ -86,13 +86,13 @@ What happens:
 Check it is running → **Debia-based command:**
 
 ```bash
-sudo docker ps
+sudo docker compose ps
 ```
 
 **Windows command:**
 
 ```powershell
-docker ps
+docker compose ps
 ```
 
 ---
@@ -246,13 +246,13 @@ docker compose down -v
 **Stop and remove images (fresh start) → Debia-based command:**
 
 ```bash
-sudo docker compose down --rmi
+sudo docker compose down --rmi local
 ```
 
 **Windows command:**
 
 ```powershell
-docker compose down --rmi
+docker compose down --rmi local
 ```
 
 ---
