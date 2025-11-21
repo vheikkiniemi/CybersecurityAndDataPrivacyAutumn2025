@@ -8,7 +8,7 @@
 * You have already completed **Phase 2**, which created project
 
   * 📦 `cybersec-phase1-part1`
-  * 📦 `cybersec-phase2`
+  * 📦 `cybersec-phase1-part2`
 
 * You now download [`docker-compose.yml`](https://github.com/vheikkiniemi/CybersecurityAndDataPrivacyAutumn2025/blob/main/BookingSystem/Phase2/docker-compose.yml) for **Phase 2** into its own folder, which will create
 
@@ -23,6 +23,12 @@ In the folder where the **Phase 2** `docker-compose.yml` is stored:
 
 ```bash
 docker compose up -d
+```
+
+**Debian-based → sudo:**
+
+```bash
+sudo docker compose up -d
 ```
 
 This starts:
@@ -80,6 +86,12 @@ Each project will have its own containers listed under it.
 docker compose ls
 ```
 
+**Debian-based → sudo:**
+
+```bash
+sudo docker compose ls
+```
+
 You should see **both** names in the list:
 
 ```text
@@ -99,11 +111,20 @@ All services (in current project folder):
 docker compose logs -f
 ```
 
+**Debian-based → sudo:**
+
 Single service:
 
 ```bash
 docker compose logs -f web
 docker compose logs -f database
+```
+
+**Debian-based → sudo:**
+
+```bash
+sudo docker compose logs -f web
+sudo docker compose logs -f database
 ```
 
 ---
@@ -116,10 +137,29 @@ Stop containers (keep data):
 docker compose down
 ```
 
+**Debian-based → sudo:**
+
+```bash
+sudo docker compose down
+```
+
 Stop containers **and delete database data** (Phase 2 only):
 
 ```bash
 docker compose down -v
+```
+
+**Debian-based → sudo:**
+
+```bash
+sudo docker compose down -v
+```
+
+Single service:
+
+```bash
+sudo docker compose down 'database' -v
+sudo docker compose down 'web' -v
 ```
 
 Use `-v` only if you are OK with **losing all PostgreSQL data** for this project.
