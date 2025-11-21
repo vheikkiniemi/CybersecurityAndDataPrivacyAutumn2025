@@ -113,7 +113,13 @@ docker compose logs -f
 
 **Debian-based → sudo:**
 
-Single service:
+```bash
+sudo docker compose logs -f
+```
+
+---
+
+**Single service:**
 
 ```bash
 docker compose logs -f web
@@ -124,6 +130,8 @@ docker compose logs -f database
 
 ```bash
 sudo docker compose logs -f web
+```
+```bash
 sudo docker compose logs -f database
 ```
 
@@ -142,6 +150,8 @@ docker compose down
 ```bash
 sudo docker compose down
 ```
+
+---
 
 Stop containers **and delete database data** (Phase 2 only):
 
