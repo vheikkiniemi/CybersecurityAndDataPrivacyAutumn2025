@@ -679,12 +679,12 @@ http-post-form "/login:username=^USER^&password=^PASS^:F=Invalid email or passwo
 
 ## 🖥️ Securing System Access
 
-✔️ Restrict administrator privileges
-✔️ Use firewalls
-✔️ Enable intrusion detection (IDS/IPS)
-✔️ Apply Role-Based Access Control (RBAC)
-✔️ Patch and update regularly
-✔️ Disable unneeded services
+✔️ Restrict administrator privileges  
+✔️ Use firewalls  
+✔️ Enable intrusion detection (IDS/IPS)  
+✔️ Apply Role-Based Access Control (RBAC)  
+✔️ Patch and update regularly  
+✔️ Disable unneeded services  
 
 ---
 
