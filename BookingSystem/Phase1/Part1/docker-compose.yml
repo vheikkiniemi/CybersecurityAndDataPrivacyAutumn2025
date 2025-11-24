@@ -21,9 +21,7 @@ services:
     depends_on:
       - database
     environment:
-      DATABASE_URL: "postgres://postgres:Secret1234!@host.docker.internal:5432/postgres"
-    extra_hosts:
-      - "host.docker.internal:host-gateway"
+      DATABASE_URL: "postgres://postgres:Secret1234!@database:5432/postgres"
 
 volumes:
   pgroot: {}
