@@ -188,21 +188,6 @@ zap_report_round4.md
 ---
 
 
-## 🎯 Final Outcome
-
-By the end of the assignment, the you hvae a **three-section authorization map**:
-
-* **Guest → what they can / cannot do**
-* **Reserver → what they can / cannot do**
-* **Administrator → what they can / cannot do**
-
-This becomes the **core of authorization analysis** and is submitted along with:
-
-📄 `zap_report_round4.md` (ZAP markdown report)
-
----
-
-
 # 🌐 **Testing Phase 1 →  Browser Testing**
 
 Start with the browser as a normal end user.
@@ -321,7 +306,7 @@ At this point, you should:
 
 ---
 
-# 🧾 Final Output to Return**
+# 🧾 Final Output to Return (Github repo link)**
 
 ## 📌 **File 1 → Your Authorization Test Report**
 
