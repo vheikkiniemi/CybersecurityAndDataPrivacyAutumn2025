@@ -320,9 +320,9 @@ At this point, you should:
 
 ---
 
-# 🧾 Final Output to Return (Github repo link)
+## 🧾 Final Output to Return (Github repo link)
 
-## 📌 **File 1 → Your Authorization Test Report**
+### 📌 **File 1 → Your Authorization Test Report**
 
 Markdown file with:
 
@@ -332,7 +332,7 @@ Markdown file with:
 
 ---
 
-## 📌 **File 2 → ZAP Report**
+### 📌 **File 2 → ZAP Report**
 
 Markdown file named:
 
@@ -342,7 +342,7 @@ zap_report_round4.md
 
 ---
 
-# 🎉 You're Done!
+## 🎉 You're Done!
 
 This assignment replicates the workflow of a real junior penetration tester, focusing on:
 
