@@ -306,7 +306,7 @@ At this point, you should:
 
 ---
 
-# 🧾 Final Output to Return (Github repo link)**
+# 🧾 Final Output to Return (Github repo link)
 
 ## 📌 **File 1 → Your Authorization Test Report**
 
