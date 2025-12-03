@@ -74,6 +74,8 @@ You must create **one clear markdown document** where all testing results are or
 
 ### 🧑‍🦲 **Guest**
 
+---
+
 **✅ Can do**
 
 List every action a *Guest* can perform, with the page or endpoint.
@@ -97,7 +99,9 @@ Example format:
 
 ---
 
-## 🧑‍💼 **Reserver**
+### 🧑‍💼 **Reserver**
+
+---
 
 **✅ Can do**
 
@@ -126,6 +130,8 @@ Example format:
 ---
 
 ### 🧑‍💼🛡️ **Administrator**
+
+---
 
 **✅ Can do**
 
@@ -188,11 +194,11 @@ zap_report_round4.md
 ---
 
 
-# 🌐 **Testing Phase 1 →  Browser Testing**
+## 🌐 **Testing Phase 1 →  Browser Testing**
 
 Start with the browser as a normal end user.
 
-## **Tasks:**
+**Tasks:**
 
 1. Create test accounts:
 
@@ -213,13 +219,15 @@ Start with the browser as a normal end user.
    * Update the table
    * Record discrepancies between specs and implementation
 
-## **Key idea:**
+---
+
+**Key idea:**
 
 Try breaking the rules.
 
 ---
 
-# 🧪 **Testing Phase 2 → ZAP Testing**
+## 🧪 **Testing Phase 2 → ZAP Testing**
 
 Use OWASP ZAP to:
 
@@ -228,7 +236,7 @@ Use OWASP ZAP to:
 * Detect authorization issues like IDOR, missing access checks
 * Explore API behavior
 
-## **Tasks:**
+**Tasks:**
 
 1. Run a full spider + passive scan (and optional active scan).
 2. Explore the site in authenticated mode for both roles.
@@ -243,11 +251,11 @@ Add any new findings to your main table.
 
 ---
 
-# 🧭 **Testing Phase 3 → Gobuster / wfuzz / ffuf**
+## 🧭 **Testing Phase 3 → Gobuster / wfuzz / ffuf**
 
 Now test for hidden or unreferenced endpoints.
 
-## **Examples:**
+**Examples:**
 
 **General directory discovery:**
 
@@ -273,14 +281,18 @@ wfuzz -c -w /usr/share/wordlists/dirb/common.txt --hc 404 http://localhost:8000/
 wfuzz -c -z range,1-1000 --hc 404 http://localhost:8000/api/reservations/FUZZ
 ```
 
-### **Your job:**
+---
+
+**Your job:**
 
 * Add all discovered endpoints to your table
 * Test access for Guest / Reserver / Admin
 * Note any unexpected behavior
 * Verify backend authorization (not just frontend UI)
 
-### **Critical finding examples to watch for:**
+---
+
+**Critical finding examples to watch for:**
 
 * Guest can access `/api/resources` ❌
 * Reserver can delete other users ❌
@@ -289,7 +301,7 @@ wfuzz -c -z range,1-1000 --hc 404 http://localhost:8000/api/reservations/FUZZ
 
 ---
 
-# ✍️ **Final Consolidation**
+## ✍️ **Final Consolidation**
 
 At this point, you should:
 
@@ -299,7 +311,9 @@ At this point, you should:
 ✔️ Have hidden pages tested via Gobuster/wfuzz  
 ✔️ Have evaluated the implementation against specs 
 
-**Now:*
+---
+
+**Now:**
 
 1. Re-walk the app with your final list.
 2. Correct mistakes or update findings.
