@@ -1,13 +1,236 @@
 > [!NOTE]
 > The material was created with the help of ChatGPT and Copilot.
 
-# **Authorization in Web Environments**
+# 🔐 Introduction to Authorization
+
+Authorization answers the question: **“What are you allowed to do?”**
+
+If **authentication** is *showing your ID card* 🚪🪪 → proving who you are → then **authorization** is the **security guard deciding where you can go** 🔑.
+
+Think of a university building:
+
+* You identify yourself at the door (not visibly, but by surveillance cameras and the lobby staff) → *authentication*
+* You swipe your card to open certain rooms (or teacher) → *authorization*
+* Some doors stay locked for you because you lack privileges → *access control*
+
+Or imagine a hotel 🏨:
+
+* Every guest logs in at reception → *authentication*
+* Each room card opens only **your** room, not someone else’s → *authorization*
+* Staff cards access more areas → *role-based access*
+
+And a restaurant analogy 🍽️:
+
+* Anyone may enter the restaurant → **public access**
+* Only staff can enter the kitchen → **restricted access**
+* Only the chef can open the ingredient storage → **high-privilege access**
+
+These metaphors highlight the same principle we use in information systems:
+**users must only access what they are explicitly allowed to access**.
+
+---
+
+## 🎯 Why Authorization Matters
+
+Authorization forms the backbone of secure system behavior:
+
+* Prevents unauthorized operations (e.g., deleting users, reading sensitive data)
+* Reduces attack surfaces and blast radius
+* Enforces privacy and compliance (GDPR, HIPAA, PCI-DSS)
+* Supports clear separation of duties
+* Helps implement the *Principle of Least Privilege (PoLP)*
+
+A system without proper authorization is like a hotel where *any room card opens every room* 🚨 → even if authentication works perfectly.
+
+---
+
+# 🏛️ Models and Approaches to Authorization
+
+## 👤➡️🔑 Role-Based Access Control (RBAC) 
+
+Users are grouped into **roles**, and each role grants specific permissions.
+
+Analogy:
+
+* Teacher → can access classroom and teacher’s lounge
+* Student → can access classroom but not the lounge
+* Administrator → access everywhere
+
+RBAC works best in organizations with stable roles.
+
+---
+
+## 🧩 Attribute-Based Access Control (ABAC) 
+
+Permissions depend on **user attributes**, **resource attributes**, and **context**.
+Example:
+
+* *“Allow access only if user is a nurse AND shift = active AND patient = assigned.”*
+* Context: Time of day, location, device security level
+
+ABAC is flexible and expressive → like giving access only when certain *conditions* are met.
+
+---
+
+## 📜⚙️ Rule-Based Access Control 
+
+Access is granted based on **explicit rules**, e.g.:
+
+* “Admins can always delete comments.”
+* “Users may edit only their own profile.”
+
+A bit like traffic laws 🚦:
+everyone follows the same rules, regardless of personal characteristics.
+
+---
+
+## 🎛️ Discretionary Access Control (DAC) 
+
+The owner of a resource decides who is allowed to access it.
+Comparable to lending your apartment keys to a friend 🔑 → *you decide*, not the building.
+
+---
+
+## 🛡️ Mandatory Access Control (MAC) 
+
+Used in high-security environments (military, intelligence).
+Data has classifications such as *Confidential, Secret, Top Secret*.
+
+Users must meet the clearance level → like a movie production set 🎥 where only authorized staff enter restricted scenes.
+
+---
+
+# 🔒 Authorization in Web Applications
+
+Authorization often happens after successful **authentication**.
+
+Key question: **“Is this user allowed to perform this specific action?”**
+
+Modern apps usually combine multiple strategies:
+
+**✔️ Endpoint-level checks**
+
+E.g.,
+
+```
+/admin/delete-user → allowed only for role admin
+```
+
+---
+
+**✔️ Resource ownership**
+
+E.g.,
+
+```
+User A cannot modify User B’s data
+```
+
+---
+
+**✔️ Session or token-based authorization**
+
+* JWT tokens store roles and claims
+* Server-side sessions include user privileges
+
+If these checks fail, the system must respond with:
+
+* **403 Forbidden** 🚫 (authenticated but not allowed)
+* **401 Unauthorized** 🔑 (authentication missing or invalid)
+
+---
+
+## 🧱 Common Authorization Vulnerabilities
+
+**Broken Access Control (OWASP A01) 🚨**
+
+When authorization fails, attackers may:
+
+* Access data belonging to other users
+* Escalate privileges
+* Manipulate sensitive operations
+* Enumerate system resources
+
+**Example:**
+
+A user changes their profile URL from:
+
+```
+/profile?id=123
+```
+
+to
+
+```
+/profile?id=124
+```
+
+… and unexpectedly gains access.
+This is like trying random hotel room numbers until one opens → a catastrophic failure.
+
+---
+
+## 💡 The Principle of Least Privilege (PoLP)
+
+Users should have **only the permissions they absolutely need**, nothing more.
+This reduces damage if accounts are compromised.
+
+Analogy:
+You give your friend the *mailbox key* 🗳️ when they house-sit → not your *entire keychain*.
+
+---
+
+## 🧰 Implementing Authorization → Tips
+
+**🔑 Use centralized authorization logic**
+
+Avoid scattered permission checks. Use middleware, policy engines, or access control modules.
+
+---
+
+**🧩 Consider future maintainability**
+
+Access rules change over time. Keep the model easy to update.
+
+---
+
+**🛡️ Log unauthorized attempts**
+
+Failed access attempts may reveal attacks.
+
+---
+
+**🔍 Validate both `frontend and backend`**
+
+Frontend restrictions are cosmetic. Backend is the real gatekeeper.
+
+---
+
+**🧪 Test authorization thoroughly**
+
+Use role-switching tests, session tampering tests, and fuzzing techniques.
+
+---
+
+## 🚀 Summary
+
+Authorization is about **controlled access** → deciding *who can do what* in a secure, predictable, and auditable way.
+
+Through real-life metaphors (hotels, restaurants, universities), the core idea becomes clear:
+
+> 🔒 **Authentication proves your identity; authorization defines your power.**
+>
+> Without strong authorization, even perfect authentication cannot protect a system.
+
+---
+
+# 🔐 Authorization in Web Environments at the code level
 
 In web environments, authorization refers to managing a user's rights and access permissions after they have been identified (authenticated). Various methods and techniques are often used for authorization.
 
-## **1. Common Authorization Methods**
+## 🎛️ Common Authorization Methods
 
-### **1.1 Role-Based Access Control (RBAC)**
+### 👥 Role-Based Access Control (RBAC)
 - Users are assigned roles (e.g., `admin`, `user`, `guest`), and access rights are based on these roles.
 - Example: `Admin` can modify data, `User` can read and update, `Guest` can only read.
 - Example in code:
@@ -21,7 +244,7 @@ In web environments, authorization refers to managing a user's rights and access
 
 ---
 
-### **1.2 Permission-Based Access Control (PBAC)**
+### 🚪 Permission-Based Access Control (PBAC)
 - Access rights are defined as individual permissions (e.g., `read_reports`, `edit_users`, `delete_posts`), which can be assigned to roles or individual users.
 - More flexible than `RBAC` as permissions are not tightly bound to roles.
 - Example in code:
@@ -35,7 +258,7 @@ In web environments, authorization refers to managing a user's rights and access
 
 ---
 
-### **1.3 Attribute-Based Access Control (ABAC)**
+### 🏷️Attribute-Based Access Control (ABAC)
 - Access rights are based on attributes of the user, resource, or environment (e.g., `age`, `department`, `location`, `time`).
 - Example: `HR department employees can view employee data only during work hours and only for their department`.
 - Useful in complex systems.
@@ -51,16 +274,16 @@ In web environments, authorization refers to managing a user's rights and access
 
 ---
 
-### **1.4 Token-Based Authorization**
+### 🪙 Token-Based Authorization
 - Tokens (e.g., `JWT`, `OAuth 2.0`, `OpenID Connect`) allow managing access rights without continuous logins.
-- `JSON Web Token (JWT)` – contains user information and rights, sent with each request.
-- `OAuth 2.0` – used for API call authorization (e.g., logging in with Google or Facebook).
-- `OpenID Connect (OIDC)` – an extension of OAuth 2.0 that also enables user authentication.
+- `JSON Web Token (JWT)` → contains user information and rights, sent with each request.
+- `OAuth 2.0` → used for API call authorization (e.g., logging in with Google or Facebook).
+- `OpenID Connect (OIDC)` → an extension of OAuth 2.0 that also enables user authentication.
 - **Use Cases:** API interfaces.
 
 ---
 
-### **1.5 Context-Based Authorization**
+### 🚪 Context-Based Authorization
 - Access is granted based on the situation (e.g., `IP address`, `device`, `location`, `behavior pattern`).
 - Example: `If a user tries to log in from an unknown device, they must verify their identity with an additional credential`.
 - Used in `Google Workspace Security` and `Zero Trust` architectures.
@@ -68,19 +291,19 @@ In web environments, authorization refers to managing a user's rights and access
 
 ---
 
-### **1.6 Hierarchical and Multi-Level Authorization**
+### 🎛️ Hierarchical and Multi-Level Authorization**
 - In more complex applications, authorization can be hierarchical, e.g., `managers can view their employees' data but not data from other teams`.
 - Often combines `RBAC` and `ABAC` methods.
 
 ---
 
-### **1.7 Access Control Lists (ACL)**
+### 📂 Access Control Lists (ACL)
 - Each resource has a list of users and their rights (e.g., `read`, `write`, `execute`).
 - Often used in file systems and web servers but not always scalable in large systems.
 
 ---
 
-### **1.8 Delegated Authorization**
+### 🤝 Delegated Authorization
 - A user can grant access to their resources to another user or application (e.g., `OAuth 2.0 Delegation`).
 - Example: `Google Drive allows users to choose who can view, comment, or edit a file`.
 
@@ -93,9 +316,9 @@ In web environments, authorization refers to managing a user's rights and access
 
 ---
 
-## **2. Using Sessions**
+## 🕒 Using Sessions
 
-### **2.1 How Sessions Work in Authorization**
+### ➜ How Sessions Work in Authorization
 1. **User logs in:**
    - User provides username and password.
    - Application verifies credentials and creates a session.
@@ -117,7 +340,7 @@ In web environments, authorization refers to managing a user's rights and access
 > ✅ A session can continue even if the user closes the browser and returns later if session information is stored in cookies.  
 > ✅ A session is a broader concept that covers the entire user's visit to the website. It can include multiple sessions.  
 
-### **2.2 Session Storage Options**
+### 🔎 Session Storage Options
 Sessions can be stored in various ways:
 
 **In server memory:**
@@ -134,7 +357,7 @@ Sessions can be stored in various ways:
 
 ---
 
-### **2.3 Session-Based Authorization in Practice (Node.js + Express)**
+### 🌐 Session-Based Authorization in Practice (Node.js + Express)
 Here's an example of how sessions can be used on a `Node.js` server with `Express.js` and the `express-session` library:
 
 ```javascript
@@ -182,7 +405,7 @@ app.listen(3000, () => console.log('Server running'));
 
 ---
 
-### **2.4 Session Security**
+### 🧠 Session Security
 - **HttpOnly cookies:** Cookies cannot be read by JavaScript, reducing the risk of XSS.
   ```javascript
   cookie: { httpOnly: true, secure: true }
@@ -199,18 +422,18 @@ app.listen(3000, () => console.log('Server running'));
 
 ---
 
-### **2.6 When to Use Sessions?**  
+### ☝️ When to Use Sessions? 
 ✅ **Traditional web applications** where the user remains logged in for a long time.  
 ✅ **Applications with complex access control** (e.g., role-based access).  
 ✅ **When the server wants to maintain control over sessions**, for example, for security reasons.  
 
 ---
 
-## **3 JWT (JSON Web Token)**
+## 📦 JWT (JSON Web Token)
 
 [JWT (JSON Web Token)](https://jwt.io/) is a **lightweight and secure** way to implement authentication and authorization in web applications. It is **stateless**, meaning it does not require a session stored in the server's memory (like sessions), but all information is included in the token itself.
 
-### **3.1 Structure of JWT**
+### 🪙 Structure of JWT
 JWT consists of three parts separated by dots `.`:
 ```
 header.payload.signature
@@ -256,7 +479,7 @@ header.payload.signature
 
 ---
 
-### **3.2 Using JWT**
+### 🛡️ Using JWT
 
 1. **User logs in**
     - The user provides credentials.
@@ -278,7 +501,7 @@ header.payload.signature
 
 ---
 
-### **3.3 JWT in Practice (Node.js + Express)**
+### 🌐 JWT in Practice (Node.js + Express)
 
 Install the necessary packages:
 ```bash
@@ -331,7 +554,7 @@ app.listen(3000, () => console.log('Server running on port 3000'));
 
 ---
 
-### **3.4 JWT vs. Session-Based Authentication**
+### ✨ JWT vs. Session-Based Authentication
 | **Feature** | **JWT** | **Sessions** |
 | :----: |:----:|:----:|
 | **Stateless?** | ✅ Yes | ❌ No |
@@ -356,7 +579,7 @@ app.listen(3000, () => console.log('Server running on port 3000'));
 
 ---
 
-### **3.5 JWT Security**
+### 🛡️ JWT Security
 1. Do not store JWT in localStorage (vulnerable to XSS attacks).  
    - Use `HttpOnly cookie`, if possible.  
 2. Use a short expiration time (`exp`) and refresh the token as needed.  
@@ -366,7 +589,7 @@ app.listen(3000, () => console.log('Server running on port 3000'));
 
 ---
 
-### **3.6 Summary**
+### 🚪 Summary
 ✅ JWT is a lightweight and scalable way to implement authentication and authorization.  
 ✅ A good alternative to sessions in API-based applications.  
 ✅ Requires additional security measures, especially in token handling.  
@@ -374,9 +597,9 @@ app.listen(3000, () => console.log('Server running on port 3000'));
 
 ---
 
-## **4 Authorization Methods and Sessions**
+## 🔐 Authorization Methods and Sessions
 
-### **4.1 Role-Based Access Control (RBAC) + Sessions**
+### 👤 Role-Based Access Control (RBAC) + Sessions
 **How does it work?**
 - The user's role (e.g., `admin`, `user`, `guest`) is stored in the session.
 - In each request, the session is checked to see if the user belongs to the correct role.
@@ -396,7 +619,7 @@ app.listen(3000, () => console.log('Server running on port 3000'));
 
 ---
 
-### **4.2 Permission-Based Access Control (PBAC) + Sessions**
+### 📋 Permission-Based Access Control (PBAC) + Sessions
 **How does it work?**
 - Instead of storing only the role in the session, individual permissions (e.g., `"can_edit_users": true`) are stored.
 - In each request, it is checked whether the user has the right to perform the action.
@@ -415,7 +638,7 @@ app.listen(3000, () => console.log('Server running on port 3000'));
 
 ---
 
-### **4.3 Attribute-Based Access Control (ABAC) + Sessions**
+### 👥 Attribute-Based Access Control (ABAC) + Sessions
 **How does it work?**
 - User attributes (e.g., department, location, working hours) are stored in the session.
 - Access is granted only if the user's attributes meet the requirements.
@@ -435,7 +658,7 @@ app.listen(3000, () => console.log('Server running on port 3000'));
 
 ---
 
-### **4.4 Token-Based Authorization (JWT, OAuth 2.0) + Sessions**
+### 🪙 Token-Based Authorization (JWT, OAuth 2.0) + Sessions
 **How does it work?**
 - The token can be `stored in the session` instead of being stored in the browser's cookie or localStorage.
 - This allows combining session-based and token-based approaches.
@@ -452,7 +675,7 @@ app.listen(3000, () => console.log('Server running on port 3000'));
 
 ---
 
-### **4.5 Context-Based Authorization + Sessions**
+### 🌍 Context-Based Authorization + Sessions
 **How does it work?**
 - Information about the user's device, IP address, or location is stored in the session.
 - If the context changes suspiciously (e.g., logging in from a different country), additional verification may be required.
@@ -472,7 +695,7 @@ app.listen(3000, () => console.log('Server running on port 3000'));
 
 ---
 
-### **4.6 Access Control List (ACL) + Sessions**
+### 🛡️ Access Control List (ACL) + Sessions
 **How does it work?**
   - User rights to specific resources (e.g., "can edit only own files") are stored in the session.
   - In each request, the ACL is checked to see if the user can access the resource.
@@ -492,7 +715,7 @@ app.listen(3000, () => console.log('Server running on port 3000'));
 
 ---
 
-### **4.7 Delegated Authorization (OAuth 2.0 Delegation) + Sessions**
+### 🤝 Delegated Authorization (OAuth 2.0 Delegation) + Sessions
 **How does it work?**
 - The user's OAuth 2.0 authorization is stored in the session, and requests are made on behalf of the user.
 
@@ -507,7 +730,7 @@ app.listen(3000, () => console.log('Server running on port 3000'));
 
 ---
 
-### **4.8 Summary: When to Combine Sessions with Authorization Methods?**
+### 🎯 Summary: When to Combine Sessions with Authorization Methods?
 | Authorization Method | Can it be used with sessions? | Good combination? |
 |:----:|:----:|:----:|
 | `RBAC` (role-based) | ✅ | Yes, simple and effective. |
@@ -520,7 +743,7 @@ app.listen(3000, () => console.log('Server running on port 3000'));
 
 ---
 
-**Considerations**
+**💡Considerations**
 
 ✅ Using sessions is useful when you want to keep the user's state managed on the server side.  
 ✅ Most authorization methods can be combined with sessions, but a token-based approach may be better for API-based systems.  
@@ -528,9 +751,9 @@ app.listen(3000, () => console.log('Server running on port 3000'));
 
 ---
 
-## **5 Authorization Methods and JWT**
+## 🔐 Authorization Methods and JWT
 
-### **5.1 Role-Based Access Control (RBAC) + JWT**
+### 👤 Role-Based Access Control (RBAC) + JWT
 - JWT contains the user's role in the payload.
 - In each request, the server checks if the user has the required role.
 
@@ -563,7 +786,7 @@ app.get('/admin', authenticateToken, authorizeRole("admin"), (req, res) => {
 
 ---
 
-### **5.2 Permission-Based Access Control (PBAC) + JWT**
+### 🚪 Permission-Based Access Control (PBAC) + JWT
 - JWT can store individual permissions.
 - In each request, it is checked whether the user has the right to perform the action.
 
@@ -595,7 +818,7 @@ app.get('/edit-user', authenticateToken, authorizePermission("edit_users"), (req
 
 ---
 
-### **5.3 Attribute-Based Access Control (ABAC) + JWT**
+### 🏷️ Attribute-Based Access Control (ABAC) + JWT
 - JWT contains user attributes (e.g., department, location, working hours).
 - The server checks if the attributes meet the access requirements.
 
@@ -628,7 +851,7 @@ app.get('/hr-dashboard', authenticateToken, authorizeByDepartment("HR"), (req, r
 
 ---
 
-### **5.4 Context-Based Authorization (Zero Trust) + JWT**
+### 🚫 Context-Based Authorization (Zero Trust) + JWT
 - JWT contains information about the user's login method, IP address, or device.
 - If the context changes, the server can reject the request.
 
@@ -660,7 +883,7 @@ app.get('/secure-data', authenticateToken, verifyContext, (req, res) => {
 
 ---
 
-### **5.5 Delegated Authorization (OAuth 2.0) + JWT**
+### 🤝 Delegated Authorization (OAuth 2.0) + JWT
 - JWT is used in OAuth 2.0 to prove authorization.
 - The user grants a third party access to their resources.
 
@@ -691,9 +914,9 @@ app.get('/user-profile', authenticateToken, authorizeScope("read:user"), (req, r
 
 ---
 
-### **5.6 JWT vs. Session-Based Authorization**
+### 📌 JWT vs. Session-Based Authorization
 | Authorization Method | JWT | Session |
-|:----:|:----:|:----:|
+|:-----|:----|:----|
 | `RBAC` (role-based) | ✅ Included in token | ✅ Stored on the server |
 | `PBAC` (permission-based) | ✅ Included in token | ✅ Stored in session |
 | `ABAC` (attribute-based) | ✅ Included in token | ✅ Stored in session |
@@ -702,7 +925,7 @@ app.get('/user-profile', authenticateToken, authorizeScope("read:user"), (req, r
 
 ---
 
-### **5.7 Summary**
+### 🎯 Summary
 ✅ **JWT is well-suited for API-based systems** because it is **stateless** and does not require a session stored on the server.  
 ✅ **Session-based authorization is suitable for traditional web applications** where the user's state needs to be maintained in the server's memory.  
 ✅ **A combination of JWT + sessions can be beneficial** if scalability is desired, but also the ability to invalidate individual user sessions.  
