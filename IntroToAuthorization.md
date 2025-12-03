@@ -341,17 +341,18 @@ In web environments, authorization refers to managing a user's rights and access
 > ✅ A session is a broader concept that covers the entire user's visit to the website. It can include multiple sessions.  
 
 ### 🔎 Session Storage Options
-Sessions can be stored in various ways:
 
-**In server memory:**
+**Sessions can be stored in various ways:**
+
+**→ In server memory:**
 - Fast but not scalable (if there are multiple servers, the session does not persist between them).
 - Use: **small applications**.
 
-**In a database (e.g., MySQL, PostgreSQL, MongoDB):**
+**→ In a database (e.g., MySQL, PostgreSQL, MongoDB):**
 - Scalable, but the database can slow down with a large number of users.
 - Use: **multi-user environments**.
 
-**In Redis or Memcached memory store:**
+**→ In Redis or Memcached memory store:**
 - Fast and scalable solution, suitable for large systems.
 - Use: **session management for large applications**.
 
@@ -556,7 +557,7 @@ app.listen(3000, () => console.log('Server running on port 3000'));
 
 ### ✨ JWT vs. Session-Based Authentication
 | **Feature** | **JWT** | **Sessions** |
-| :----: |:----:|:----:|
+| :---- |:----|:----|
 | **Stateless?** | ✅ Yes | ❌ No |
 | **Requires server storage?** | ❌ No | ✅ Yes |
 | **Scalable?** | ✅ Yes | ❌ Not well |
@@ -732,7 +733,7 @@ app.listen(3000, () => console.log('Server running on port 3000'));
 
 ### 🎯 Summary: When to Combine Sessions with Authorization Methods?
 | Authorization Method | Can it be used with sessions? | Good combination? |
-|:----:|:----:|:----:|
+|:----|:----:|:----|
 | `RBAC` (role-based) | ✅ | Yes, simple and effective. |
 | `PBAC` (permission-based) | ✅ | Suitable if there are many permissions and they change frequently. |
 | `ABAC` (attribute-based) | ✅ | Practical, but may require a more complex session structure. |
