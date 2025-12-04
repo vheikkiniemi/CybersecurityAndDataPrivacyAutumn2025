@@ -10,7 +10,7 @@ If **authentication** is *showing your ID card* 🚪🪪 → proving who you are
 Think of a university building:
 
 * You identify yourself at the door (not visibly, but by surveillance cameras and the lobby staff) → *authentication*
-* You swipe your card to open certain rooms (or teacher) → *authorization*
+* You (or teacher) swipe your card to open certain rooms → *authorization*
 * Some doors stay locked for you because you lack privileges → *access control*
 
 Or imagine a hotel 🏨:
@@ -175,8 +175,7 @@ This is like trying random hotel room numbers until one opens → a catastrophic
 Users should have **only the permissions they absolutely need**, nothing more.
 This reduces damage if accounts are compromised.
 
-Analogy:
-You give your friend the *mailbox key* 🗳️ when they house-sit → not your *entire keychain*.
+**Analogy:** You give your friend the *mailbox key* 🗳️ when they house-sit → not your *entire keychain*.
 
 ---
 
