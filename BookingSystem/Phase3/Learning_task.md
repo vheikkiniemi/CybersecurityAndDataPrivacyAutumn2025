@@ -202,7 +202,7 @@ Start with the browser as a normal end user.
 
 1. Create test accounts:
 
-   * Guest = not logged in
+   * Guest = not logged in (no need to create account)
    * Reserver
    * Administrator
 
@@ -213,10 +213,11 @@ Start with the browser as a normal end user.
    * Change URLs manually
    * Attempt to access admin pages as a Reserver
    * Attempt to access reserver-only pages as a Guest
+   * ...
 
 3. For every page or function you test:
 
-   * Update the table
+   * Update the list
    * Record discrepancies between specs and implementation
 
 ---
@@ -238,16 +239,16 @@ Use OWASP ZAP to:
 
 **Tasks:**
 
-1. Run a full spider + passive scan (and optional active scan).
+1. Run a scan.
 2. Explore the site in authenticated mode for both roles.
-3. Compare ZAP findings to your table:
+3. Compare ZAP findings to your list:
 
    * Did ZAP find pages you did not?
    * Did ZAP detect insecure authorization behavior?
 4. Export the results as **markdown**
 5. Name the file **`zap_report_round4.md`**
 
-Add any new findings to your main table.
+Add any new findings to your main list.
 
 ---
 
@@ -285,7 +286,7 @@ wfuzz -c -z range,1-1000 --hc 404 http://localhost:8000/api/reservations/FUZZ
 
 **Your job:**
 
-* Add all discovered endpoints to your table
+* Add all discovered endpoints to your list
 * Test access for Guest / Reserver / Admin
 * Note any unexpected behavior
 * Verify backend authorization (not just frontend UI)
@@ -329,6 +330,12 @@ Markdown file with:
 * Completed list
 * Findings
 * Summary of role capabilities
+
+Name:
+
+```
+auth_test_report.md
+```
 
 ---
 
