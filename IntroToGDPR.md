@@ -189,7 +189,7 @@ When a user registers, make sure that:
 ---
 
 ❓**Try asking an AI tool (e.g., Copilot, ChatGPT) the following prompts:**  
-- I have a reservation system where a person stores their email address. What do I need to do from a GDPR perspective?  
+- I have a Booking system where a person stores their email address. What do I need to do from a GDPR perspective?  
 - Can you provide a sample privacy policy?  
 - Can you provide a sample terms of service?
 
