@@ -19,7 +19,7 @@
 10. The system provider has stated that the software is developed following the Privacy by Design (PbD) principle.  
 
 > [!NOTE]  
-> As a reminder: In the previous phase, the theme was authorization. In this phase, we focus on GDPR compliance.
+> As a reminder: In the previous phase, the theme was authorization. In this phase, we focus on GDPR compliance.  
 > **☝️ So focus only on GDPR.**
 ---
 
