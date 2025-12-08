@@ -31,8 +31,8 @@ You must return **Four items → In the github repo**
 
 ## 1️⃣ **Check out the background material**
 
-[Introdution to  GDPR](../../IntroToGDPR.md) 
-[Quick Start Guide — Booking System Containers (Phase 4)](README.md)
+* [Introdution to  GDPR](../../IntroToGDPR.md)  
+* [Quick Start Guide — Booking System Containers (Phase 4)](README.md)
 
 ---
 
