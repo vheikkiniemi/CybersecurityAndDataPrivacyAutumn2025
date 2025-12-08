@@ -47,7 +47,7 @@ This starts:
   `cybersec-phase1-part1` 👉  `http://localhost:8000`  
   `cybersec-phase1-part2` 👉  `http://localhost:8001`  
   `cybersec-phase2` 👉  `http://localhost:8002`  
-  `cybersec-phase3` 👉  `http://localhost:8003`
+  `cybersec-phase3` 👉  `http://localhost:8003`  
   `cybersec-phase4` 👉  `http://localhost:8004`
 
 ---
