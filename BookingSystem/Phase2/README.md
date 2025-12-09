@@ -5,7 +5,7 @@
 ## 1. Requirements 🚀
 
 * Docker + Docker Compose installed
-* You have already completed **Phase 2**, which created project
+* You have already completed **Phase 1**, which created project
 
   * 📦 `cybersec-phase1-part1`
   * 📦 `cybersec-phase1-part2`
